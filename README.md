@@ -20,6 +20,6 @@ Open [http://localhost:8080/](http://localhost:8080/)
 
 ## Mock ups
 
-![desktop](https://raw.githubusercontent.com/adtaylor/frontender-task_vanilla/master/mockup_desktop.png)
+![desktop](https://raw.githubusercontent.com/thebeansgroup/frontender-task_vanilla/master/mockup_desktop.png)
 
-![mobile](https://raw.githubusercontent.com/adtaylor/frontender-task_vanilla/master/mockup_mobile.png)
+![mobile](https://raw.githubusercontent.com/thebeansgroup/frontender-task_vanilla/master/mockup_mobile.png)
