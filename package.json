@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "TBG Frontender task",
   "scripts": {
+    "start": "npm run dev",
     "dev": "webpack-dev-server --watch"
   },
   "repository": {
