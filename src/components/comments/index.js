@@ -10,7 +10,7 @@ export default class {
   createFactories() {
     this.comments = new Array();
     for(var i in this.data.comments) {
-      this.comments[i] = new Comment(this.data.comments[i]);
+      this.comments[i] = new Comment(this.data.comments[i], 1+parseInt(i));
     }
   }
 
@@ -23,6 +23,6 @@ export default class {
   }
 
   render() {
-    return `<h2>Comments</h2><div class="comment-box">${this.renderComments()}</div>`;
+    return `<div class="comment-box"><h2>Comments</h2>${this.renderComments()}</div>`;
   }
 }
