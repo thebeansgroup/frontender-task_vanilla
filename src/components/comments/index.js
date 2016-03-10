@@ -1,3 +1,11 @@
+/*- comments
+ *-- comment
+ *--- comment
+ *-- comment
+ */
+
+import {Comments, Comment} from './elements.js';
+
 export default class {
   constructor(data) {
     this.data = data;
@@ -6,9 +14,10 @@ export default class {
   }
 
   createFactories() {
+    this.comments = new Comments(this.data.comments);
   }
 
   render() {
-    return "comments";
+    return `<div class="comment-box"><h2>Comments</h2>${this.comments.render()}</div>`;
   }
 }

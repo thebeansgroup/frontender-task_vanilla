@@ -1,3 +1,164 @@
+/* Mobile first */
+
+/* General definitions */
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #303030;
+  background-color: #F8F8F8;
+  margin: 0;
+}
+
+h1, h2 {
+  font-size: 1.2em;
+}
+
+div.column div {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-border-radius: 5px 5px 5px 5px;
+     -moz-border-radius: 5px 5px 5px 5px;
+          border-radius: 5px 5px 5px 5px;
+}
+
+/* Event column */
+
+div.column > div.event {
+  width: 80%;
+  margin: 40px auto;
+
+  border: 1px solid #E8E8E8;
+  background-color: #FEFEFE;
+}
+
+div.column div.event > h1 {
+  background-color: #E7E7E7;
+  margin-top: 0;
+  line-height: 2.5em;
+  padding-left: 10px;
+}
+
+div.column > div.event > div {
+  padding: 0px 10px 10px 10px;
+}
+
+div.event p.event__funding__totals {
+  margin-top: 0;
+  padding-top: 15px;
+  border-top: 1px solid #E8E8E8;
+}
+
+div.event p.event__funding__totals span:first-of-type {
+  display: block;
+  font-size: 3em;
+  color: green;
+}
+
+div.event div.event__progress {
+  display: flex;
+  border: 1px solid #E8E8E8;
+  overflow: hidden;
+}
+
+div.event div.event__progress p.event__progress__total {
+  display: none;
+}
+
+div.event div.event__progress b {
+  background-color: green;
+  height: 24px;
+}
+
+div.event div.event__details {
+  height: 2.4em;
+  background: #eee;
+  margin: 5px 11px;
+  border: 1px solid #E8E8E8;
+}
+
+div.event div.event__details > div {
+  width: 50%;
+  float: left;
+  line-height: 2.8em;
+  font-size: 0.8em;
+}
+
+div.event div.event__details > div strong {
+  text-transform: uppercase;
+}
+
+/* Comment column */
+
+div.column > div.comment-box {
+  width: 80%;
+  margin: 0 auto;
+}
+
+div.comment {
+  background-color: #F0F0F0;
+  position: relative;
+  margin-bottom: 40px;
+  padding: 8px;
+  min-height: 92px;
+  animation: fade 0.5s;
+}
+
+div.comment:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  border-top: 20px solid #F0F0F0;
+  border-left: 25px solid transparent;
+  display: block;
+  width: 0;
+}
+
+div.comment div.comment_image {
+  float: left;
+  width: 75px;
+  margin-right: 12px;
+}
+
+div.comment div.comment_image img {
+  width: 100%;
+}
+
+div.comment div.comment_name {
+  font-size: 0.8em;
+}
+
+div.comment div.comment_name span {
+  font-weight: bold;
+}
+
+div.subcomments div.comment {
+  background-color: #FEFEFE;
+  margin-left: 24px;
+  margin-top: -12px;
+}
+
+div.subcomments div.comment:after {
+  border-color: #FEFEFE transparent;
+}
+
+/* Responsiveness */
+
+@media (min-width: 768px) {
+  div.row div.column {
+    width: 50%;
+    float: left;
+  }
+
+  div.row div.column div.comment-box {
+    margin-top: 52px;
+  }
+}
+
+/* CSS3 animations */
+
+@keyframes fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
