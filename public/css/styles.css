@@ -57,11 +57,8 @@ div.event p.event__funding__totals span:first-of-type {
 
 div.event div.event__progress {
   display: flex;
-}
-
-div.event div.event__progress {
-  display: flex;
   border: 1px solid #E8E8E8;
+  overflow: hidden;
 }
 
 div.event div.event__progress p.event__progress__total {
@@ -76,8 +73,7 @@ div.event div.event__progress b {
 div.event div.event__details {
   height: 2.4em;
   background: #eee;
-  width: 95%;
-  margin: 5px auto;
+  margin: 5px 11px;
   border: 1px solid #E8E8E8;
 }
 
@@ -105,6 +101,7 @@ div.comment {
   margin-bottom: 40px;
   padding: 8px;
   display: flex;
+  animation: fade 0.5s;
 }
 
 div.comment:after {
@@ -112,9 +109,8 @@ div.comment:after {
   position: absolute;
   bottom: -20px;
   left: 20px;
-  border-width: 20px 0 0 25px;
-  border-style: solid;
-  border-color: #F0F0F0 transparent;
+  border-top: 20px solid #F0F0F0;
+  border-left: 25px solid transparent;
   display: block;
   width: 0;
 }
@@ -156,4 +152,11 @@ div.subcomments div.comment:after {
   div.row div.column div.comment-box {
     margin-top: 52px;
   }
+}
+
+/* CSS3 animations */
+
+@keyframes fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
