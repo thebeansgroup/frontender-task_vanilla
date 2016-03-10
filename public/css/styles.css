@@ -100,7 +100,7 @@ div.comment {
   position: relative;
   margin-bottom: 40px;
   padding: 8px;
-  display: flex;
+  min-height: 92px;
   animation: fade 0.5s;
 }
 
@@ -115,12 +115,14 @@ div.comment:after {
   width: 0;
 }
 
-div.comment div.comment_image img {
+div.comment div.comment_image {
+  float: left;
   width: 75px;
+  margin-right: 12px;
 }
 
-div.comment div.comment_content {
-  padding-left: 8px;
+div.comment div.comment_image img {
+  width: 100%;
 }
 
 div.comment div.comment_name {
