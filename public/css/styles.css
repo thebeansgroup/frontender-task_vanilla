@@ -1,3 +1,75 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #F8F8F8;
+}
+
+.event {
+  background: white;
+  border: 2px solid #dfe0e6;
+  border-radius: 5px;
+
+  float: left;
+  margin-left: 10%;
+  margin-top: 5%;
+  max-width: 35%;
+  height: 20%;
+}
+
+.event__title__container {
+  background: #F5F5F5;
+  border-bottom: 2px solid #dfe0e6;
+  width: auto;
+}
+
+.event__title {
+  margin: 0;
+  padding: 2%;
+  font-size: 95%;
+}
+
+.event__description {
+  margin: 3%;
+  padding-bottom: 3%;
+  border-bottom: 1px solid #dfe0e6;
+}
+
+.event__funding {
+  margin: 3%;
+}
+
+.event__funding__totals {
+  color: #245626;
+}
+
+.event__funding__raised {
+  font-size: 200%;
+  font-weight: bold;
+}
+
+.event__progress__meter{
+  background: #F5F5F5;
+  border: 1px solid #dfe0e6;
+}
+
+.event__progress__percent {
+  background: #3CBF42;
+  padding-bottom: 5%;
+}
+
+.event__details {
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-bottom: 3%;
+  background: #F5F5F5;
+  border: 1px solid #dfe0e6;
+  overflow: hidden;
+  padding: 2%;
+}
+
+.event__details__date, .event__details__location {
+  width: 40%;
+  display: inline;
+  float: left;
+  font-size: 75%;
+  margin-left: 10%;
 }
