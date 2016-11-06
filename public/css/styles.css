@@ -143,7 +143,7 @@ body {
       -webkit-transform: rotate( 135deg ) skew( 0deg );
    content: "";
    position: absolute;
-   top: 95%;
+   top: 85%;
    left: -14px;
    border-top: 20px solid black;
    border-top-color: #dfe0e6;
@@ -160,12 +160,12 @@ body {
       -webkit-transform: rotate( 135deg ) skew( 0deg );
    content: "";
    position: absolute;
-   top: 93%;
-   left: -11px;
+   top: 84%;
+   left: -12px;
    border-top: 19px solid #F5F5F5;
    border-top-color: #F5F5F5;
-   border-left: 18px solid transparent;
-   border-right: 18px solid transparent;
+   border-left: 19px solid transparent;
+   border-right: 19px solid transparent;
 }
 
 .comment__children > .comment:after {
@@ -176,10 +176,10 @@ body {
       -webkit-transform: rotate( 135deg ) skew( 0deg );
    content: "";
    position: absolute;
-   top: 93%;
-   left: -11px;
+   top: 83%;
+   left: -12px;
    border-top: 19px solid white;
    border-top-color: white;
-   border-left: 18px solid transparent;
-   border-right: 18px solid transparent;
+   border-left: 19px solid transparent;
+   border-right: 19px solid transparent;
 }
