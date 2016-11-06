@@ -51,46 +51,55 @@ body {
   }
 }
 
+/* Styles the component which contains the title */
 .event__title__container {
   background: #F5F5F5;
   border-bottom: 2px solid #dfe0e6;
   width: auto;
 }
 
+/* Styles the event title */
 .event__title {
   margin: 0;
   padding: 2%;
   font-size: 95%;
 }
 
+/* Styles the event description */
 .event__description {
   margin: 3%;
   padding-bottom: 3%;
   border-bottom: 1px solid #dfe0e6;
 }
 
+/* Styles the event funding */
 .event__funding {
   margin: 3%;
 }
 
+/* Styles the totals text for the event funding */
 .event__funding__totals {
   color: #245626;
 }
 
+/* Styles the amount raised for the event funding element */
 .event__funding__raised {
   font-size: 200%;
   font-weight: bold;
 }
 
+/* Styles the funding progress meter */
 .event__progress__meter{
   background: #F5F5F5;
 }
 
+/* Styles the event progress percent */
 .event__progress__percent {
   background: #3CBF42;
   padding-bottom: 5%;
 }
 
+/* Styles the event details */
 .event__details {
   margin-left: 3%;
   margin-right: 3%;
@@ -100,6 +109,7 @@ body {
   padding: 2%;
 }
 
+/* Common styling for the event date and the event location */
 .event__details__date, .event__details__location {
   width: 40%;
   display: inline;
