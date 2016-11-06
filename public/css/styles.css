@@ -3,43 +3,50 @@ body {
   background-color: #F8F8F8;
 }
 
-.event, .comments {
-  display: table-cell;
+/* Common border styling */
+.comment, .comment__children > .comment, .event__details, .event__progress__meter {
+  border: 1px solid #dfe0e6;
 }
 
+/* Common styling between the event section and the comments section. */
+.event, .comments {
+  display: table-cell;
+  width: 35%;
+  max-width: 50%;
+  height: 20%;
+  margin-top: 5%;
+}
+
+/* Styling for the event side-panel */
 .event {
   background: white;
   border: 2px solid #dfe0e6;
   border-radius: 5px;
-
   float: left;
   margin-left: 10%;
   margin-top: 5%;
-  width: 35%;
-  max-width: 50%;
-  height: 20%;
 }
 
+/* Styling for the comments side-panel */
 .comments {
   float: right;
   margin-right: 10%;
-  margin-top: 5%;
-  width: 35%;
-  max-width: 50%;
-  height: 20%;
 }
 
+/* Handles mobile and tablet views */
 @media all and (max-width: 800px) {
+  .event, .comments {
+    width: 90%;
+    max-width: 90%;
+  }
+
   .event {
     display: table-header-group;
-    width: 90%;
-    max-width: 90%;
     margin-left: 5%;
   }
+
   .comments {
     display: table-footer-group;
-    width: 90%;
-    max-width: 90%;
     margin-right: 5%;
   }
 }
@@ -77,7 +84,6 @@ body {
 
 .event__progress__meter{
   background: #F5F5F5;
-  border: 1px solid #dfe0e6;
 }
 
 .event__progress__percent {
@@ -90,7 +96,6 @@ body {
   margin-right: 3%;
   margin-bottom: 3%;
   background: #F5F5F5;
-  border: 1px solid #dfe0e6;
   overflow: hidden;
   padding: 2%;
 }
@@ -103,22 +108,23 @@ body {
   margin-left: 10%;
 }
 
+/* Styling for normal comments */
 .comment {
   background: #F5F5F5;
-  border: 1px solid #dfe0e6;
   margin-bottom: 8%;
   border-radius: 5px;
   position: relative;
 }
 
+/* Styling for child comments */
 .comment__children > .comment {
   background: white;
-  border: 1px solid #dfe0e6;
   margin-left: 8%;
   margin-bottom: 10%;
   border-radius: 5px;
 }
 
+/* Styling for the picture in a comment */
 .comment__picture {
   max-width: 15%;
   max-height: 15%:
@@ -126,6 +132,7 @@ body {
   margin: 3%;
 }
 
+/* Styling for the actual text of a comment */
 .comment__text {
   display: inline-block;
   vertical-align: top;
@@ -135,7 +142,8 @@ body {
   max-width: 75%;
 }
 
-.comment:before {
+/* Handles the transform of the 'arrow' for the message */
+.comment:before, .comment:after, .comment__children > .comment:after {
   transform:             rotate( 135deg ) skew( 0deg );
       -moz-transform:    rotate( 135deg ) skew( 0deg );
       -ms-transform:     rotate( 135deg ) skew( 0deg );
@@ -143,43 +151,36 @@ body {
       -webkit-transform: rotate( 135deg ) skew( 0deg );
    content: "";
    position: absolute;
+}
+
+/* Common styling for arrows */
+.comment:after, .comment__children > .comment:after {
+  left: -12px;
+  border-left: 19px solid transparent;
+  border-right: 19px solid transparent;
+}
+
+/* Styling for border of the arrow */
+.comment:before {
    top: 85%;
    left: -14px;
-   border-top: 20px solid black;
+   border-top: 20px solid #dfe0e6;
    border-top-color: #dfe0e6;
    border-left: 20px solid transparent;
    border-right: 20px solid transparent;
    z-index: -1;
 }
 
+/* Styling for the arrow for a normal comment */
 .comment:after {
-  transform:             rotate( 135deg ) skew( 0deg );
-      -moz-transform:    rotate( 135deg ) skew( 0deg );
-      -ms-transform:     rotate( 135deg ) skew( 0deg );
-      -o-transform:      rotate( 135deg ) skew( 0deg );
-      -webkit-transform: rotate( 135deg ) skew( 0deg );
-   content: "";
-   position: absolute;
    top: 84%;
-   left: -12px;
    border-top: 19px solid #F5F5F5;
    border-top-color: #F5F5F5;
-   border-left: 19px solid transparent;
-   border-right: 19px solid transparent;
 }
 
+/* Styling for the arrow for a child comment */
 .comment__children > .comment:after {
-  transform:             rotate( 135deg ) skew( 0deg );
-      -moz-transform:    rotate( 135deg ) skew( 0deg );
-      -ms-transform:     rotate( 135deg ) skew( 0deg );
-      -o-transform:      rotate( 135deg ) skew( 0deg );
-      -webkit-transform: rotate( 135deg ) skew( 0deg );
-   content: "";
-   position: absolute;
    top: 83%;
-   left: -12px;
    border-top: 19px solid white;
    border-top-color: white;
-   border-left: 19px solid transparent;
-   border-right: 19px solid transparent;
 }

@@ -54,22 +54,22 @@
 
     render() {
       /**
-       * Obtains the correct donation string depending on whether or not there was a donation.
+       * Obtains the correct donation HTML string depending on whether or not there was a donation.
        */
-      function getDonationString(donation) {
-        let donationString = ``;
+      function renderDonationHTML(donation) {
+        let donationHTML = ``;
         if(donation > 0) {
-          donationString = `
-            donated £${(donation/100).toFixed(2)}
+          donationHTML = `
+            <small>donated £${(donation/100).toFixed(2)}</small>
           `;
         }
 
-        return donationString;
+        return donationHTML;
       }
 
       return `
         <strong>${this.person}</strong>
-        <small>${getDonationString(this.donation)}</small>
+        ${renderDonationHTML(this.donation)}
       `;
     }
   }

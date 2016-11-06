@@ -1,7 +1,5 @@
 //  -- comments
-//  -- -- profilepicture
-//  -- -- title
-//  -- -- commenttext
+//  -- -- comment
 
 import {Comment} from './elements.js'
 
