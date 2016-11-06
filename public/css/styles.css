@@ -3,6 +3,10 @@ body {
   background-color: #F8F8F8;
 }
 
+.event, .comments {
+  display: table-cell;
+}
+
 .event {
   background: white;
   border: 2px solid #dfe0e6;
@@ -11,8 +15,33 @@ body {
   float: left;
   margin-left: 10%;
   margin-top: 5%;
-  max-width: 35%;
+  width: 35%;
+  max-width: 50%;
   height: 20%;
+}
+
+.comments {
+  float: right;
+  margin-right: 10%;
+  margin-top: 5%;
+  width: 35%;
+  max-width: 50%;
+  height: 20%;
+}
+
+@media all and (max-width: 800px) {
+  .event {
+    display: table-header-group;
+    width: 90%;
+    max-width: 90%;
+    margin-left: 5%;
+  }
+  .comments {
+    display: table-footer-group;
+    width: 90%;
+    max-width: 90%;
+    margin-right: 5%;
+  }
 }
 
 .event__title__container {
@@ -72,14 +101,6 @@ body {
   float: left;
   font-size: 75%;
   margin-left: 10%;
-}
-
-.comments {
-  float: left;
-  margin-left: 10%;
-  margin-top: 5%;
-  max-width: 35%;
-  height: 20%;
 }
 
 .comment {
