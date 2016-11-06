@@ -73,3 +73,43 @@ body {
   font-size: 75%;
   margin-left: 10%;
 }
+
+.comments {
+  float: left;
+  margin-left: 10%;
+  margin-top: 5%;
+  max-width: 35%;
+  height: 20%;
+}
+
+.comment {
+  background: #F5F5F5;
+  border: 1px solid #dfe0e6;
+  margin-bottom: 3%;
+  border-radius: 5px;
+  position: relative;
+}
+
+.comment__children > .comment {
+  background: white;
+  border: 1px solid #dfe0e6;
+  margin-left: 10%;
+  margin-bottom: 3%;
+  border-radius: 5px;
+}
+
+.comment__picture {
+  max-width: 15%;
+  max-height: 15%:
+  display: inline-block;
+  margin: 3%;
+}
+
+.comment__text {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 3%;
+  font-size: 85%;
+  max-height: 20%;
+  max-width: 75%;
+}
