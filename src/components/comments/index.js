@@ -23,7 +23,6 @@ export default class {
     }
 
     this.allComments = commentHolder.join('');
-
   }
 
   render() {

@@ -13,10 +13,12 @@ export class Comment {
   render() {
     return `
       <div class="comments__block">
-        <img src="images/faces/${this.image}">
-        <b class="comments__name">${this.name}</b>
-        <span class="comments__donation">donated £${this.donation/100}</span>
-        <p class="comments__text">${this.comment}</p>
+        <img class="comments__image" src="images/faces/${this.image}">
+        <div class="comments__textbox">
+          <b class="comments__name">${this.name}</b>
+          <span class="comments__donation">donated £${this.donation/100}</span>
+          <p class="comments__text">${this.comment}</p>
+        </div>
       </div>
     `
   }
@@ -31,9 +33,11 @@ export class Subcomment extends Comment {
     return `
       <div class="subcomments__block">
         <img class="comments__image" src="images/faces/${this.image}">
-        <b class="comments__name">${this.name}</b>
-        <span class="comments__donation">${this.donation/100}</span>
-        <p class="comments__text">${this.comment}</p>
+        <div class="comments__textbox">
+          <b class="comments__name">${this.name}</b>
+          <span class="comments__donation">donated £${this.donation/100}</span>
+          <p class="comments__text">${this.comment}</p>
+        </div>
       </div>
     `
   }
