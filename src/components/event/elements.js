@@ -44,8 +44,9 @@ export class Funding {
 
     return `
       <div class="event__progress">
-        <p class="event__progress__total">${percentage}% of total raised</p>
-        <b class="event__progress_meter" style="width: ${percentage}%"></b>
+        <div class="event__progress_bar">
+          <div class="event__progress_meter" style="width: ${percentage}%"></div>
+        </div>
       </div>
     `;
   }

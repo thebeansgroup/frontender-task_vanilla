@@ -12,11 +12,13 @@ const data = {
   comments: [
     {
       name: "Person A",
+      image: "128-13.jpg",
       donation: 5000,
       comment: "Good luck with your thing!",
       children: [
         {
           name: "Person D",
+          image: "128-10.jpg",
           donation: 0,
           comment: "Thank you",
           children: []
@@ -25,12 +27,14 @@ const data = {
     },
     {
       name: "Person B",
+      image: "128-12.jpg",
       donation: 1000,
       comment: "Good luck. Well done! A great achievement for a great cause.",
       children: []
     },
     {
       name: "Person C",
+      image: "128-11.jpg",
       donation: 4000,
       comment: "Hope all goes well and you successfully achieve your goal. A cause close to our hearts.",
       children: []
