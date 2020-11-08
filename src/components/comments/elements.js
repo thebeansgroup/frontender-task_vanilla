@@ -31,8 +31,9 @@ export class Heading {
  * Comment Component
  */
 export class Comment {
-    constructor({ name, donation, comment, children }) {
+    constructor({ name, image, donation, comment, children }) {
         this.heading = new Heading(name, donation).render();
+        this.image = image;
         this.comment = comment;
 
         this.children = children.map(child => new Comment(child).render());
@@ -43,6 +44,7 @@ export class Comment {
           `
             <div>
               <div>
+                <img src="images/faces/${this.image}">
                 <div>
                     <p>${this.heading}</p>
                     <p>${this.comment}</p>
