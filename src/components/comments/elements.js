@@ -1,8 +1,9 @@
 export class Comment {
-    constructor(comment) {
-        console.log(comment);
-        this.name = comment.name;
-        this.comment = comment.comment;
+    constructor({ name, donation, comment, children }) {
+        this.name = name;
+        this.comment = comment;
+
+        this.children = children.map(child => new Comment(child).render());
     }
 
     render() {
@@ -14,6 +15,7 @@ export class Comment {
           <div>
             <p>${this.comment}</p>
           </div>
+          ${this.children}
         </div>
       `
     }
