@@ -1,7 +1,6 @@
 /**
  * Heading Component
  */
-
 export class Heading {
     constructor(name, donation) {
         this.name = name;
@@ -21,7 +20,12 @@ export class Heading {
         }
 
         return (
-            `<p>${this.name} ${formatDonation(this.donation)}</p>`
+            `
+                <p class="comment__heading">
+                    <strong>${this.name}</strong>
+                    ${formatDonation(this.donation)}
+                </p>
+            `
         );
     }
 }
@@ -31,22 +35,28 @@ export class Heading {
  * Comment Component
  */
 export class Comment {
-    constructor({ name, image, donation, comment, children }) {
+    constructor({ name, image, donation, comment, children }, isChild) {
         this.heading = new Heading(name, donation).render();
         this.image = image;
         this.comment = comment;
 
-        this.children = children.map(child => new Comment(child).render());
+        // To add additional styling to child comments
+        this.childClass = isChild ? "comment__child" : "";
+
+        this.children = children.map((child) => {
+            const isChild = true
+            return new Comment(child, isChild).render()
+        });
     }
 
     render() {
         return (
           `
             <div>
-              <div>
-                <img src="images/faces/${this.image}">
+              <div class="comment ${this.childClass}">
+                <img class="comment__image" src="images/faces/${this.image}">
                 <div>
-                    <p>${this.heading}</p>
+                    ${this.heading}
                     <p>${this.comment}</p>
                 </div>
               </div>
