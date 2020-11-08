@@ -18,7 +18,7 @@ export default class {
 
   render() {
     return (
-      `<div>
+      `<div class="comments">
         ${this.comments}
       </div>`
     );
