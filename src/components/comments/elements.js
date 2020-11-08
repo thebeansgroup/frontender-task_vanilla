@@ -14,7 +14,7 @@ export class Heading {
             // Only show donation info if the value is greater than 0
             if (donation > 0) {
                 // Adds a decimal place to the value
-                donationString = `donated £${(donation / 100).toFixed(2)}`
+                donationString = `donated £${(donation / 100).toFixed(2)}`;
             }
             return donationString;
         }

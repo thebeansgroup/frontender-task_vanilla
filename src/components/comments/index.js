@@ -12,7 +12,7 @@ export default class {
       return new Comment(comment).render();
     });
 
-    // add comments about why this is necessary
+    // Return string containing array elements concatenated together in order to remove commas
     this.comments = this.comments.join('');
   }
 
