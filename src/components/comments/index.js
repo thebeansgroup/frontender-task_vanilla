@@ -1,35 +1,21 @@
-//  -- event
-//  -- -- name
-//  -- -- donation
-//  -- -- text
+//  -- comments
 
-import {Name, Donation, Text} from './elements.js';
+import SingleComment from '../singleComment';
 
 export default class {
   constructor(data) {
     this.data = data;
-    this.createFactories();
-    this.render();
+    this.createComments();
+    this.render();  
   }
 
-  createFactories() {
+  createComments() {
     const commentsData = this.data.comments;
     const comments = [];
   
     for (let i = 0; i < commentsData.length; i++) {
-      this.name = new Name(commentsData[i].name);
-      this.donation = new Donation(commentsData[i].donation);
-      this.text = new Text(commentsData[i].comment);
-
-      const comment = 
-      `
-        <div class="comment">
-          ${this.name.render()}
-          ${this.donation.render()}
-          ${this.text.render()}
-        </div>
-      `;
-
+      const comment = new SingleComment(commentsData[i]).render();
+      ;
       comments.push(comment);
     }
     return comments.join("");
@@ -38,7 +24,7 @@ export default class {
   render() {
     return `
       <div class="comments">
-        ${this.createFactories()}
+        ${this.createComments()}
       </div>
     `;
   }
