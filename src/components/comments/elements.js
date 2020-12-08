@@ -2,18 +2,30 @@
  * Name Component
  */
 
-export class Title {
-  constructor(name, donation) {
+export class Name {
+  constructor(name) {
     this.name = name;
+  }
+
+  render() {
+    return `
+      <strong class="comment__name">${this.name}</strong>
+    `
+  }
+}
+
+/**
+ * Donation Component
+ */
+
+export class Donation {
+  constructor(donation) {
     this.donation = donation;
   }
 
   render() {
     return `
-        <p>
-          <strong class="comment__name">${this.name}</strong>
-          ${this.donation}
-        </p>
+      <p class="comment__donation">${this.donation}</p>
     `
   }
 }
@@ -29,7 +41,7 @@ export class Text {
 
   render() {
     return `
-      <div class="comment__text">${this.text}</div>
+      <p class="comment__text">${this.text}</p>
     `
   }
 }

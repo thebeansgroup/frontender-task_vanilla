@@ -1,6 +1,9 @@
-//  -- comments
+//  -- event
+//  -- -- name
+//  -- -- donation
+//  -- -- text
 
-import {Title, Text} from './elements.js';
+import {Name, Donation, Text} from './elements.js';
 
 export default class {
   constructor(data) {
@@ -10,15 +13,32 @@ export default class {
   }
 
   createFactories() {
-    this.title = new Title(this.data.comments[0].name, this.data.comments[0].donation)
-    this.text = new Text(this.data.comments[0].comment);
+    const commentsData = this.data.comments;
+    const comments = [];
+  
+    for (let i = 0; i < commentsData.length; i++) {
+      this.name = new Name(commentsData[i].name);
+      this.donation = new Donation(commentsData[i].donation);
+      this.text = new Text(commentsData[i].comment);
+
+      const comment = 
+      `
+        <div class="comment">
+          ${this.name.render()}
+          ${this.donation.render()}
+          ${this.text.render()}
+        </div>
+      `;
+
+      comments.push(comment);
+    }
+    return comments.join("");
   }
 
   render() {
     return `
-      <div class="comment">
-      ${this.title.render()}
-      ${this.text.render()}
+      <div class="comments">
+        ${this.createFactories()}
       </div>
     `;
   }
