@@ -45,3 +45,19 @@ export class Text {
     `
   }
 }
+
+/**
+ * Image Component
+ */
+
+export class Image {
+  constructor(id) {
+    this.id = id;
+  }
+
+  render() {
+    return `
+      <img src="images/faces/128-${this.id}.jpg" />
+    `
+  }
+}
