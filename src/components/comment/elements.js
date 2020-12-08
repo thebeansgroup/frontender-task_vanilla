@@ -26,7 +26,7 @@ export class Donation {
   render() {
     return (
       this.donation > 0 ? 
-      `<p class="comment__donation">donated £${this.donation}</p>` 
+      `<p class="comment__donation">donated £${this.donation/100}</p>` 
       : 
       '');
   }

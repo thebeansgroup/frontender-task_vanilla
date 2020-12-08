@@ -22,7 +22,7 @@ export default class {
 
   render() {
     return `
-      <div class="comment ${this.child ? 'child' : ''}">
+      <div class="comment ${this.child ? 'child' : 'parent'}">
         ${this.image.render()}
         <div class="comment__container">
           <div class="comment__title">
@@ -31,7 +31,10 @@ export default class {
           </div>
           ${this.text.render()}
         </div>
-        <div class="comment__bubble">bubble</div>
+        <svg class="comment__bubble" width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="comment__bubble_fill" d="M1 0H41L21 15L1 30V0Z" fill="#F5F5F5"/>
+          <path d="M1 0V30L40.5 0.5V0" stroke="#E1E1E1" stroke-width="1.25"/>
+      </svg>
       </div>
     `;
   }

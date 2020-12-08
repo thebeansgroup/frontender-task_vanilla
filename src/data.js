@@ -21,7 +21,13 @@ const data = {
           id: 10,
           donation: 0,
           comment: "Thank you",
-          children: []
+          children: [{
+            name: "Person D",
+            id: 10,
+            donation: 0,
+            comment: "Very much",
+            children: []
+          }]
         }
       ]
     },
@@ -30,8 +36,13 @@ const data = {
       id: 12,
       donation: 1000,
       comment: "Good luck. Well done! A great achievement for a great cause.",
-      children: []
-    },
+      children: [{
+        name: "Person D",
+        id: 10,
+        donation: 0,
+        comment: "Thank you",
+        children: []
+      }]    },
     {
       name: "Person C",
       id: 11,
