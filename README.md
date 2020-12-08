@@ -1,12 +1,12 @@
 # Frontender Task
 
-This repo contains a lo-fi, half built, unstlyed, ES6 JS app. Your task is to complete the project to match the mock ups below.
+This repo contains a lo-fi, half-built, unstyled ES6 JS app. Your task is to complete the project to match the mockups below.
 
-To complete you'll need to:
+To complete, you'll need to:
 
 1. Fork this repo and commit your work into the fork. Once you are complete, create a pull request back into this repo.
 2. Create JS classes for the `Comments` section of the app. Use the `Event` section as a template. Vanilla JS.
-3. Create CSS for the page. Do not use an existing framework, keep it light weight. Think about effiecency.
+3. Create CSS for the page. Do not use an existing framework, keep it light`weight. Think about efficiency.
 
 
 ## Getting started
