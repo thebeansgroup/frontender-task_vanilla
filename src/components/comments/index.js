@@ -1,22 +1,21 @@
 //  -- comments
 
-import SingleComment from '../singleComment';
+import Comment from '../comment';
 
 export default class {
   constructor(data) {
     this.data = data;
-    this.createComments(this.data.comments);
     this.render();  
   }
 
-  createComments(commentsData) {
+  createComments(commentsData, child = false) {
     let comments = '';
   
     for (let i = 0; i < commentsData.length; i++) {
-      const comment = new SingleComment(commentsData[i]).render();
+      const comment = new Comment(commentsData[i], child).render();
       comments += comment;
       if (commentsData[i].children.length > 0) {
-        comments += this.createComments(commentsData[i].children);
+        comments += this.createComments(commentsData[i].children, true);
       }
 
     }

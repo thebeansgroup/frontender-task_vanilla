@@ -24,9 +24,11 @@ export class Donation {
   }
 
   render() {
-    return `
-      <p class="comment__donation">${this.donation}</p>
-    `
+    return (
+      this.donation > 0 ? 
+      `<p class="comment__donation">donated £${this.donation}</p>` 
+      : 
+      '');
   }
 }
 
@@ -42,6 +44,22 @@ export class Text {
   render() {
     return `
       <p class="comment__text">${this.text}</p>
+    `
+  }
+}
+
+/**
+ * Image Component
+ */
+
+export class Image {
+  constructor(id) {
+    this.id = id;
+  }
+
+  render() {
+    return `
+      <img class="comment__image" src="images/faces/128-${this.id}.jpg" />
     `
   }
 }
