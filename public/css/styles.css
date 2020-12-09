@@ -1,3 +1,184 @@
 body {
+  background: #F8F8F8;
+  color: #444;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 7em;
+}
+
+.column {
+  flex: 50%;
+}
+
+.comment {
+  background: #F5F5F5;
+  border: solid 1px #E1E1E1;
+  border-radius: 5px 5px 5px 0;
+  display: flex;
+  margin-bottom: calc(30px + 1em);
+  padding: 1em;
+  position: relative;
+}
+
+.comment__bubble {
+  bottom: -30px;
+  height: 30px;
+  left: -2px;
+  position: absolute;
+  width: 40px;
+}
+
+.comment__container {
+  margin-left: 1em;
+}
+
+.comment__donation {
+  margin: 0;
+  padding-left: 7px;
+}
+
+.comment__image {
+  height: 75px;
+  width: 75px;
+}
+
+.comment__title {
+  display: flex;
+}
+
+.child {
+  background-color: #FFFFFF;
+  margin-left: 3em;
+}
+
+.comment.parent + .child {
+  margin-top: -2em;
+}
+
+.child .comment__bubble_fill {
+  fill: #FFFFFF;
+}
+
+.event {
+  background: #FFFFFF;
+  border: solid 1px #E1E1E1;
+  border-radius: 5px;
+  margin-right: 3em;
+}
+
+.event__container {
+  padding: 0 1em 1em 1em;
+}
+
+.event__description {
+  margin-bottom: 2em;
+}
+
+.event__details {
+  background: #F5F5F5;
+  border: solid 1px #E1E1E1;
+  display: flex;
+  font-size: 14px;
+  padding: 1em 2em;
+}
+
+.event__details__date, .event__details__location {
+  flex: 50%;
+}
+
+.event__funding {
+  border-top: solid 1px #E1E1E1;
+}
+
+.event__funding__raised {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.event__funding__target {
+  font-size: 20px;
+}
+
+.event__funding__totals {
+  color: #245626;
+  padding-top: 0.75em;
+}
+
+.event__progress {
+  padding-top: 1.25em;
+}
+
+.event__progress-bar {
+  background-color: #F5F5F5;
+  border: solid 1px #E1E1E1;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.event__progress-bar_fill {
+  display: block;
+  height: 22px;
+  background-color:#3CBF42;  
+  transition: width 500ms ease-in-out;
+}
+
+.event__title {
+  background: #F5F5F5;
+  border-radius: 5px 5px 0 0;
+  font-size: medium;
+  margin: 0;
+  padding: 1em;
+}
+
+.row {
+  display: flex;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  body {
+    padding: 3em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 1em;
+  }
+
+  .comment__text {
+    margin-top: 0.5em;
+  }
+
+  .comment__title {
+    font-size: 14px;
+  }
+  
+  .event {
+    margin-bottom: 2em;
+    margin-right: 0;
+  }
+
+  .event__details {
+    padding: 0.5em 1em;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  strong {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .comment__donation {
+    padding-left: 0
+  }
+
+  .comment__title {
+    flex-direction: column;
+  }
 }
