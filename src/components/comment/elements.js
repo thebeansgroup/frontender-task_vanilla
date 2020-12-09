@@ -10,7 +10,7 @@ export class Name {
   render() {
     return `
       <strong class="comment__name">${this.name}</strong>
-    `
+    `;
   }
 }
 
@@ -25,10 +25,10 @@ export class Donation {
 
   render() {
     return (
-      this.donation > 0 ? 
-      `<p class="comment__donation">donated £${this.donation/100}</p>` 
-      : 
-      '');
+      this.donation > 0 
+        ? `<p class="comment__donation">donated £${this.donation/100}</p>` 
+        : ''
+    );
   }
 }
 
@@ -44,7 +44,7 @@ export class Text {
   render() {
     return `
       <p class="comment__text">${this.text}</p>
-    `
+    `;
   }
 }
 
@@ -60,6 +60,6 @@ export class Image {
   render() {
     return `
       <img class="comment__image" src="images/faces/128-${this.id}.jpg" />
-    `
+    `;
   }
 }

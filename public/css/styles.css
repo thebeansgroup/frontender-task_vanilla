@@ -174,10 +174,6 @@ body {
 }
 
 @media only screen and (max-width: 320px) {
-  strong {
-    display: block;
-  }
-
   .comment__donation {
     padding-left: 0
   }
