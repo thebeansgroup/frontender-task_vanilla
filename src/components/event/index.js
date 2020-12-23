@@ -25,6 +25,7 @@ export default class {
       <div class="event">
         ${this.title.render()}
         ${this.description.render()}
+        <hr />
         ${this.funding.render()}
         ${this.details.render()}
       </div>

@@ -1,14 +1,32 @@
+//  -- comment
+//  -- -- name
+//  -- -- donation
+//  -- -- comment
+//  -- -- image
+
+import {
+  Comment
+} from './elements.js';
+
 export default class {
   constructor(data) {
     this.data = data;
-    this.createFactories();
+    this.comments = [];
+    this.createComments();
     this.render();
   }
 
-  createFactories() {
+  createComments() {
+    this.data.comments.map((comment) => {
+      this.comments.push(new Comment(comment.name, comment.donation, comment.comment, comment.children));
+    });
   }
 
   render() {
-    return "comments";
+    var renderStr = "";
+    this.comments.forEach((comment) => {
+      renderStr += comment.render();
+    });
+    return renderStr;
   }
 }
