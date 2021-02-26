@@ -86,6 +86,53 @@ body {
   margin-top: 1rem;
 }
 
-.event__details__date, .event__details__location {
+.event__details__date {
   flex: 0.5;
+  margin-right: 1rem;
+}
+
+.event__details__location {
+  flex: 0.5;
+  margin-left: 1rem;
+}
+
+.comment {
+  border: 1px solid var(--dark-grey);
+  position: relative;
+  display: flex;
+  margin-bottom: calc(1rem + 30px);
+  border-radius: 5px 5px 5px 0;
+  padding: 1rem;
+}
+
+.comment, .child {
+  background-color: var(--white);
+}
+
+.comment, .parent {
+  background-color: var(--grey);
+}
+
+.comment__container {
+  margin-left: 1rem;
+}
+
+.comment__pointer {
+  bottom: -39px;
+  left: -2px;
+  position: absolute;
+}
+
+.comment__image {
+  height: 80px;
+  width: 80px;
+}
+
+.comment__title {
+  display: flex;
+}
+
+.comment__donation {
+  margin: 0;
+  padding-left: 0.5rem;
 }
