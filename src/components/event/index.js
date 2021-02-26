@@ -4,7 +4,7 @@
 //  -- -- funding
 //  -- -- details
 
-import {Title, Description, Funding, Details} from './elements.js';
+import { Title, Description, Funding, Details } from './elements.js';
 
 export default class {
   constructor(data) {
@@ -24,9 +24,11 @@ export default class {
     return `
       <div class="event">
         ${this.title.render()}
-        ${this.description.render()}
-        ${this.funding.render()}
-        ${this.details.render()}
+        <div class="event__info">
+          ${this.description.render()}
+          ${this.funding.render()}
+          ${this.details.render()}
+        </div>
       </div>
     `;
   }
