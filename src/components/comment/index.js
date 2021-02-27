@@ -27,10 +27,10 @@ export default class {
       <div class="comment ${this.child ? 'child' : 'parent'}">
         ${this.image.render()}
         <div class="comment__container">
-          <div class="comment__title">
+          <p class="comment__title">
             ${this.name.render()}
             ${this.donation.render()}
-          </div>
+          </p>
           ${this.text.render()}
         </div>
         ${this.pointer.render()}

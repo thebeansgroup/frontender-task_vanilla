@@ -25,7 +25,7 @@ export class Name {
 
   render() {
     return `
-      <strong class="comment__name">${this.name}</strong>
+      <strong class="comment__name">${this.name} </strong>
     `
   }
 }
@@ -41,7 +41,7 @@ export class Donation {
 
   render() {
     return (
-      !!this.donation ? `<p class="comment__donation">donated £${this.donation}</p>`
+      !!this.donation ? `donated £${this.donation}`
         : ``
     )
   }
