@@ -9,7 +9,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: var(--light-grey);
   color: #333;
-  padding: 7.5rem;
+  padding: clamp(2.5rem, 10%, 7.5rem);
 }
 
 .row {
@@ -100,16 +100,18 @@ body {
   border: 1px solid var(--dark-grey);
   position: relative;
   display: flex;
-  margin-bottom: calc(1rem + 30px);
   border-radius: 5px 5px 5px 0;
   padding: 1rem;
+  margin-bottom: calc(1.25rem + 40px);
 }
 
-.comment, .child {
+.comment.child {
   background-color: var(--white);
+  margin-left: 50px;
+  margin-top: -40px;
 }
 
-.comment, .parent {
+.comment.parent {
   background-color: var(--grey);
 }
 
@@ -129,10 +131,16 @@ body {
 }
 
 .comment__title {
-  display: flex;
+  margin: 0.25rem 0 0.5rem;
+  font-size: 0.9rem;
 }
 
 .comment__donation {
   margin: 0;
   padding-left: 0.5rem;
+}
+
+.comment__text {
+  margin: 0;
+  font-size: 1.1rem;
 }
