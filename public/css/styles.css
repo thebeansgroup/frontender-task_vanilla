@@ -152,3 +152,67 @@ body {
   margin: 0;
   font-size: 1.1rem;
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: clamp(0.5rem, 10%, 2rem);
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    flex: 1;
+  }
+
+  .event {
+    margin: 0 0 2rem 0;
+  }
+
+  .event__details {
+    padding: 1rem 1rem;
+  }
+
+  .event__details__date {
+    margin-right: 0.5rem;
+    justify-content: center;
+  }
+
+  .event__details__location {
+    margin-left: 0.5rem;
+    justify-content: center;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+
+  .event__details__date {
+    margin-right: 0.25rem;
+  }
+
+  .event__details__location {
+    margin-left: 0.25rem;
+  }
+
+  .event__details__date p, .event__details__location p {
+    margin-left: 0;
+  }
+
+}
+
+
+@media screen and (max-width: 450px) {
+
+  .event__details__date {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event__details__location {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
