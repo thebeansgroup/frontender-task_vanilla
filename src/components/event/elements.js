@@ -76,10 +76,12 @@ export class Details {
     return `
       <div class="event__details">
         <div class="event__details__date">
-          <strong>DATE:</strong> ${this.date}
+          <strong>DATE:</strong>
+          <p>${this.date}</p>
         </div>
         <div class="event__details__location">
-          <strong>LOCATION:</strong> ${this.location}
+          <strong>LOCATION:</strong>
+          <p>${this.location}</p>
         </div>
       </div>
     `

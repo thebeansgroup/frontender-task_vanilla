@@ -89,11 +89,19 @@ body {
 .event__details__date {
   flex: 0.5;
   margin-right: 1rem;
+  display: flex;
 }
 
 .event__details__location {
   flex: 0.5;
   margin-left: 1rem;
+  display: flex;
+}
+
+.event__details__date p, .event__details__location p {
+  margin: 0;
+  white-space: nowrap;
+  margin-left: 0.25rem;
 }
 
 .comment {
