@@ -29,7 +29,7 @@ class Header {
 
   render() {
     return `
-    <div class="comment__header"><span>${this.name}</span>${!this.isChild ? ` donated £${this.donation / 100}` : ''}</div>
+    <div class="comment__header"><strong>${this.name}</strong>${!this.isChild ? ` donated £${this.donation / 100}` : ''}</div>
     `
   }
 }
