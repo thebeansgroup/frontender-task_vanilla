@@ -1,5 +1,3 @@
-
-
 /**
  * Image Component
  */
@@ -12,7 +10,7 @@ class Image {
   render() {
     return `
     <img src="${this.image}" alt="" />
-    `
+    `;
   }
 }
 
@@ -30,7 +28,7 @@ class Header {
   render() {
     return `
     <div class="comment__header"><strong>${this.name}</strong>${!this.isChild ? ` donated £${this.donation / 100}` : ''}</div>
-    `
+    `;
   }
 }
 
@@ -44,7 +42,7 @@ class Message {
   }
 
   render() {
-    return `<div class="comment__message">${this.message}</div>`
+    return `<div class="comment__message">${this.message}</div>`;
   }
 }
 
@@ -53,7 +51,7 @@ class Message {
  */
 
 export class Comment {
-  constructor (comment, isChild = false) {
+  constructor(comment, isChild = false) {
     this.comment = comment;
     this.isChild = isChild;
     this.createFactories();
@@ -76,6 +74,6 @@ export class Comment {
       </div>
     </div>
     ${this.children.map((child) => child.render()).join('')}
-    `
+    `;
   }
 }

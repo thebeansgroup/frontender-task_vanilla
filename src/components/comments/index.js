@@ -8,7 +8,7 @@ export default class {
   }
 
   createFactories() {
-    this.formattedComments = this.data.comments.map((comment) => new Comment(comment)) // do we need to add () =>
+    this.formattedComments = this.data.comments.map((comment) => new Comment(comment));
   }
 
   render() {
