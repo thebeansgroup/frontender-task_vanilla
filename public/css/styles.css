@@ -1,3 +1,147 @@
-body {
+* {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 10px;
 }
+
+body {
+  background: #eee;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column {
+  width: 550px;
+  display: flex;
+  justify-content: center;
+}
+
+/*
+  * Event Area Styling
+*/
+
+.event {
+  width: 90%;
+  background: #fff;
+  margin: 4% 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.1);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.1);
+  border: 1px #aaa solid;
+  height: 450px;
+}
+
+.event__title {
+  background: #eee;
+  font-size: 2.4rem;
+  padding: 3%;
+}
+
+.event__description {
+  margin: 3%;
+  border-bottom: 1px #aaa solid;
+}
+
+.event__description p {
+  font-size: 1.8rem;
+  margin: 4% 0%;
+}
+
+.event__funding {
+  padding: 4%;
+}
+
+.event__funding__totals {
+  font-size: 1.8rem;
+  color: green;
+}
+.event__funding__totals span {
+  font-size: 3rem;
+  font-weight: 600;
+  display: block;
+}
+
+.event__progress {
+  width: 100%;
+  height: 30px;
+  background: #eee;
+  margin: 3% 0;
+}
+.event__progress_meter {
+  background: green;
+  height: 30px;
+}
+
+.event__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  border: 1px solid #aaa;
+  background: #eee;
+  padding: 2%;
+  margin: 4%;
+}
+
+.event__details div,
+.event__details div strong {
+  font-size: 1.6rem;
+}
+
+.event__details div strong {
+  text-transform: uppercase;
+}
+
+/*
+  * Comments Area Styling
+*/
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  margin: 4%;
+  width: 90%;
+}
+
+.comments__comment {
+  width: 100%;
+  height: 150px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 90% 90%, 10% 90%, 0 100%, 0% 90%);
+  background: #ddd;
+  display: flex;
+  margin: 2% 0%;
+  padding: 4%;
+  border-radius: 8px;
+}
+
+.comments__comment.child {
+  width: 85%;
+  align-self: flex-end;
+  background: #fff;
+}
+
+.comments__comment img {
+  height: 80%;
+}
+
+.comment__body {
+  margin: 0 3%;
+}
+
+.comment__header,
+.comment__header strong {
+  font-size: 1.4rem;
+  margin-bottom: 2%;
+}
+
+.comment__message {
+  font-size: 1.6rem;
+}
+
