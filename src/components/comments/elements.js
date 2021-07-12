@@ -9,13 +9,15 @@
     }
 
     getCommentHtml(isChild, comment) {
-      const commentClasses = isChild ? 'comment__child' : 'sbeans__background';
+      const commentClasses = isChild ? 'comment__child' : '';
 
-      return ` <div class="comment ${commentClasses} sbeans__border">
-        <img class="comment__image" src="./images/faces/128-${comment.id}.jpg" />
-        <div class="comment__content">
-          <p class="comment__header"><strong>${comment.name}</strong> ${!isChild ? 'donated £'+comment.donation : ''}</p>
-          <span>${comment.comment}</span> 
+      return `<div class="comment__container ${commentClasses}">
+        <div class="comment sbeans__background">
+          <img class="comment__image" src="./images/faces/128-${comment.id}.jpg" />
+          <div class="comment__content">
+            <p class="comment__header"><strong>${comment.name}</strong> ${!isChild ? 'donated £'+comment.donation : ''}</p>
+            <span>${comment.comment}</span> 
+          </div>
         </div>
       </div>`
     }
