@@ -22,7 +22,7 @@ class App {
   render() {
     this.el.innerHTML = `
       <div class="row">
-        <div class="column">${this.event.render()}</div>
+        <div class="column sbeans__events sbeans__border sbeans__radius">${this.event.render()}</div>
         <div class="column">${this.comments.render()}</div>
       </div>
     `;

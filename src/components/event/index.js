@@ -22,11 +22,14 @@ export default class {
 
   render() {
     return `
-      <div class="event">
+      <div class="sbeans__radius">
         ${this.title.render()}
-        ${this.description.render()}
-        ${this.funding.render()}
-        ${this.details.render()}
+        <div class="event__content">
+          ${this.description.render()}
+          <hr>
+          ${this.funding.render()}
+          ${this.details.render()}
+        </div>
       </div>
     `;
   }
