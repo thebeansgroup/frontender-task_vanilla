@@ -1,3 +1,143 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #F8F8F8;
+}
+
+.sbeans__background {
+  background-color: #F5F5F5;
+}
+
+.sbeans__border {
+  border: solid .1px #EAEAEA;
+}
+
+.sbeans__radius {
+  border-radius: 5px;
+}
+
+.container {
+  padding: 100px 10%;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-flow: column;
+  flex-basis: 100%;
+  min-width: 400px;
+  flex: 1;
+  margin: 20px;
+}
+
+.sbeans__events {
+  background-color: #FFFFFF;
+  height: fit-content;
+}
+
+.event__content {
+  padding: 0 15px;
+}
+
+.event__title {
+  font-size: 18px;
+  margin: 0;
+  padding: 13px;
+  border-bottom: solid .1px #EAEAEA;
+}
+
+.event__progress_meter {
+  background-color: #3CBF42;
+  height: 20px;
+}
+
+.event__funding__totals {
+  color: #245626;
+}
+
+.event__funding__raised {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.event__details {
+  margin: 10px 0 20px 0;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event__details > * {
+  padding: 5px 20px;
+  font-size: 14px;
+  width: 50%;
+  white-space: nowrap;
+}
+
+.event__details strong {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.comment__container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 230px;
+  background-color: #EAEAEA;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 20% 75%, 0 92%, 0 90%, 0% 75%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 20% 75%, 0 92%, 0 90%, 0% 75%);
+}
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  padding: 20px;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 44px);
+  height: calc(100% - 45px);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 20% 75%, 0 92%, 0 90%, 0% 75%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 20% 75%, 0 92%, 0 90%, 0% 75%);
+}
+
+.comment:not(:first-child) {
+  margin: -20px 0 20px 0;
+}
+
+.comment__image {
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.comment__header {
+  font-size: 14px;
+  margin: 0px 0px 8px 0px;
+}
+
+.comment_text {
+  font-size: 18px;
+}
+
+.comment__child {
+  width: 70%;
+  margin-top: -40px;
+  align-self: flex-end;
+}
+
+.comment__child > .comment {
+  background-color: #FFFFFF;
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    padding: 100px 2%;
+  }
 }
