@@ -16,7 +16,7 @@
           <img class="comment__image" src="./images/faces/128-${comment.id}.jpg" />
           <div class="comment__content">
             <p class="comment__header"><strong>${comment.name}</strong> ${!isChild ? 'donated £'+comment.donation : ''}</p>
-            <span>${comment.comment}</span> 
+            <span class="comment_text">${comment.comment}</span> 
           </div>
         </div>
       </div>`

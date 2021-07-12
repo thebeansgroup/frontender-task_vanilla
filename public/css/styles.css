@@ -122,6 +122,10 @@ body {
   margin: 0px 0px 8px 0px;
 }
 
+.comment_text {
+  font-size: 18px;
+}
+
 .comment__child {
   width: 70%;
   margin-top: -40px;
