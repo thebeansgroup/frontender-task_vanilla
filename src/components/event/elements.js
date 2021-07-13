@@ -10,7 +10,7 @@ export class Title {
   render() {
     return `
       <h1 class="event__title">${this.title}</h1>
-    `
+    `;
   }
 }
 
@@ -26,7 +26,7 @@ export class Description {
   render() {
     return `
       <div class="event__description">${this.description}</div>
-    `
+    `;
   }
 }
 
@@ -59,7 +59,7 @@ export class Funding {
         </p>
         ${this.renderProgress()}
       </div>
-    `
+    `;
   }
 }
 
@@ -83,6 +83,6 @@ export class Details {
           <strong>Location:</strong> ${this.location}
         </div>
       </div>
-    `
+    `;
   }
 }
