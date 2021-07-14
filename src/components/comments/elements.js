@@ -25,8 +25,8 @@ export class Header {
   render() {
     return `
       <div class="comment__header">
-        <storng>${this.name}</strong>
-        ${!this.isChild && `<span>donated £${this.donation/100}</span>`}
+        <strong>${this.name}</strong>
+        ${!this.isChild ? `<span>donated £${this.donation/100}</span>`:''}
       </div>
     `;
   }
@@ -69,7 +69,7 @@ export class Comment {
 
   render() {
     return `
-      <div class="comment ${this.isChild && 'child'}">
+      <div class="comment ${this.isChild ? 'child' : ''}">
         ${this.image.render()}
         <div class="comment__body">
           ${this.header.render()}
