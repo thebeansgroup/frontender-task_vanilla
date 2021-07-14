@@ -1,14 +1,37 @@
+//  -- comments
+//  -- -- comment
+//  -- -- -- image
+//  -- -- -- header
+//  -- -- -- content
+
+import {Comment} from './elements.js';
+
 export default class {
   constructor(data) {
     this.data = data;
-    this.createFactories();
     this.render();
   }
 
-  createFactories() {
+  createComments() {
+    let comments = '';
+
+    this.data.comments.forEach(comment => {
+      comments += new Comment(comment).render();
+      if (comment.children.length) {
+        comment.children.forEach(child => {
+          comments += new Comment(child, true).render();
+        })
+      }
+    });
+
+    return comments;
   }
 
   render() {
-    return "comments";
+    return `
+      <div class="comments">
+       ${this.createComments()}
+      </div>
+    `;
   }
 }
