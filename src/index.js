@@ -1,5 +1,5 @@
-import data     from './data.js';
-import Event    from './components/event';
+import data from './data.js';
+import Event from './components/event';
 import Comments from './components/comments';
 
 /**
@@ -15,7 +15,7 @@ class App {
   }
 
   createFactories() {
-    this.event    = new Event(data);
+    this.event = new Event(data);
     this.comments = new Comments(data);
   }
 
