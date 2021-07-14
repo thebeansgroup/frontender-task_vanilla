@@ -96,11 +96,11 @@ body {
   font-size: 0.8rem;
 }
 
-.event__details > div{
+.event__details > div {
   width: 48%;
 }
 
-.event__details strong{
+.event__details strong {
   text-transform: uppercase;
 }
 
@@ -169,7 +169,6 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-
   .row {
     display: flex;
     flex-direction: column; 
@@ -182,6 +181,5 @@ body {
   .column:first-child {
     margin-bottom: 40px;
   }
-
 }
 
