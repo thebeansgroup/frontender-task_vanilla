@@ -1,14 +1,20 @@
+import { Comment } from "../comment";
+
 export default class {
   constructor(data) {
-    this.data = data;
-    this.createFactories();
+    this.comments = data.comments;
     this.render();
   }
 
-  createFactories() {
-  }
-
   render() {
-    return "comments";
+    return `
+      <div class="comments">
+        ${this.comments.map((comment) => {
+          let index = Math.floor(Math.random() * 20) + 1;
+          let commentComponent = new Comment(comment, index);
+          return commentComponent.render();
+        })}
+      </div>
+    `
   }
 }

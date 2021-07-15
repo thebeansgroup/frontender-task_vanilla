@@ -24,9 +24,11 @@ export default class {
     return `
       <div class="event">
         ${this.title.render()}
-        ${this.description.render()}
-        ${this.funding.render()}
-        ${this.details.render()}
+        <div class="event__body">
+          ${this.description.render()}
+          ${this.funding.render()}
+          ${this.details.render()}
+        </div>
       </div>
     `;
   }
