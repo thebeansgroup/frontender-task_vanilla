@@ -33,7 +33,7 @@ export class Comment {
         <div class="comment__children">
             ${this.children.map((comment) => {
                 let index = Math.floor(Math.random() * 20) + 1;
-                var commentComponent = new Comment(comment, index);
+                let commentComponent = new Comment(comment, index);
                 return commentComponent.render();
             })}
         </div>
