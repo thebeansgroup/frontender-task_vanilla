@@ -9,8 +9,8 @@ export default class {
   render() {
     return `
       <div class="comments">
-        ${this.comments.map((comment, index) => {
-          index++;
+        ${this.comments.map((comment) => {
+          let index = Math.floor(Math.random() * 20) + 1;
           var commentComponent = new Comment(comment, index);
           return commentComponent.render();
         })}

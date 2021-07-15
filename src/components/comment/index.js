@@ -31,9 +31,9 @@ export class Comment {
             </div>
         </div>
         <div class="comment__children">
-            ${this.children.map((comment, index) => {
-                index++;
-                var commentComponent = new Comment(comment, index + 3);
+            ${this.children.map((comment) => {
+                let index = Math.floor(Math.random() * 20) + 1;
+                var commentComponent = new Comment(comment, index);
                 return commentComponent.render();
             })}
         </div>
