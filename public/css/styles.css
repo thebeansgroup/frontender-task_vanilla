@@ -1,3 +1,204 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+
+.column {
+  width: 90%;
+  min-width: 450px;
+  margin: 2rem auto;
+  max-width: 640px;
+}
+
+/*
+  * Event
+*/
+
+.event {
+  background: #fff;
+  border-radius: 5px;
+  border: 1px #e3e3e3 solid;
+}
+
+.event__title {
+  background: #eee;
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px #e3e3e3 solid;
+}
+
+.event__description {
+  margin: 1.5rem;
+  margin-bottom: 0rem;
+  font-size: 1.4rem;
+  border-bottom: 1px #aaa solid;
+}
+
+.event__funding {
+  padding: 1rem;
+}
+
+.event__funding p {
+  margin: 0;
+}
+
+.event__funding__totals {
+  font-size: 1.8rem;
+  color: green;
+}
+
+.event__funding__raised {
+  color: #235626;
+}
+.event__funding__totals span {
+  font-size: 3rem;
+  font-weight: 600;
+  display: block;
+}
+
+.event__progress {
+  width: 100%;
+  height: 30px;
+  background: #eee;
+  margin-top: 0.5rem;
+  border: 1px #e3e3e3 solid;
+}
+.event__progress__meter {
+  background: green;
+  height: 30px;
+}
+
+.event__details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  background: #eee;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0rem;
+  border: 1px #e3e3e3 solid;
+}
+
+.event__details div,
+.event__details div strong {
+  font-size: 1.2rem;
+}
+
+.event__details div strong {
+  text-transform: uppercase;
+}
+
+/*
+  * Comments
+*/
+
+.comments {
+  display: flex;
+  flex-direction: column;
+
+  margin: 2rem;
+  width: 90%;
+}
+
+.comments__comment {
+  height: 100px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 83%, 7% 83%, 0 100%, 0 74%, 0 56%);
+  background: #eeeeee;
+  display: flex;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  border: 1.5px #e3e3e3 solid;
+  border-radius: 8px;
+}
+
+.comments__comment.child {
+  margin: 1rem 0rem;
+  margin-left: 5rem;
+  background: #fff;
+}
+
+.comment__image {
+  height: 80%;
+}
+
+.comment__body {
+  margin-left: 1rem;
+}
+.comment__details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.comment__details__name,
+.comment__details__name strong {
+  font-size: 1.4rem;
+}
+
+.comment__details__donation {
+  margin-left: 0.5rem;
+}
+
+.comment__text {
+  font-size: 1rem;
+}
+
+@media (max-width: 1080px) {
+  .row {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .column {
+    width: 90%;
+    min-width: 0rem;
+    margin: 1rem auto;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .event__title {
+    font-size: 1rem;
+  }
+  .event__description {
+    font-size: 1rem;
+  }
+  .event__funding__totals span {
+    font-size: 2.2rem;
+  }
+  .event__funding__totals {
+    font-size: 1.2rem;
+  }
+
+  .event__details div,
+  .event__details div strong {
+    font-size: 0.8rem;
+  }
+
+  .comment__details__name,
+  .comment__details__name strong {
+    font-size: 1rem;
+  }
+  .comment__details__donation {
+    font-size: 0.8rem;
+  }
+
+  .comment__text {
+    font-size: 0.8rem;
+  }
 }

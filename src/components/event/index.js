@@ -4,7 +4,7 @@
 //  -- -- funding
 //  -- -- details
 
-import {Title, Description, Funding, Details} from './elements.js';
+import { Title, Description, Funding, Details } from "./elements.js";
 
 export default class {
   constructor(data) {
