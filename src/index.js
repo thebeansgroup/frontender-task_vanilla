@@ -21,10 +21,8 @@ class App {
 
   render() {
     this.el.innerHTML = `
-      <div class="row">
-        <div class="column">${this.event.render()}</div>
-        <div class="column">${this.comments.render()}</div>
-      </div>
+      <div class="column">${this.event.render()}</div>
+      <div class="column">${this.comments.render()}</div>
     `;
   }
 }
