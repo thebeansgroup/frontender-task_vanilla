@@ -29,6 +29,8 @@ export default class {
           nestedLevel += 1
           traverse(obj[key].children);
         }
+
+        nestedLevel = 0;
       }
     }
 
