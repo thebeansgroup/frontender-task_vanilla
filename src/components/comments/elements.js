@@ -45,7 +45,7 @@
     return `
     <span class="comment__author">
       <strong>${this.authorName}</strong>
-      ${ (this.donation==="") ? '' : `<span>donated £${this.donation}</span>`}
+      ${ (this.donation==="") ? '' : `<span class="comment__amount">donated £${this.donation}</span>`}
     </span>
     `
   }
