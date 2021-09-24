@@ -19,11 +19,22 @@ export class Title {
  */
 
 export class Description {
-  constructor(description) {
-    this.description = description;
+  constructor(data) {
+    this.data = data;
+    this.createFactories();
+  }
+
+  createFactories() {
+    this.description = this
   }
 
   render() {
+    this.description = this.data.map(paragraph => {
+      return `
+        <p>${paragraph}</p>
+      `
+    }).join('');
+
     return `
       <div class="event__description">${this.description}</div>
     `
@@ -44,8 +55,9 @@ export class Funding {
 
     return `
       <div class="event__progress">
-        <p class="event__progress__total">${percentage}% of total raised</p>
-        <b class="event__progress_meter" style="width: ${percentage}%"></b>
+        <strong class="event__progress__meter">
+          <div class="event__progress__meter__level" style="width: ${percentage}%"></div>
+        </strong>
       </div>
     `;
   }
@@ -53,10 +65,11 @@ export class Funding {
   render() {
     return `
       <div class="event__funding">
-        <p class="event__funding__totals">
-          <span class="event__funding__raised">£${this.funding.raised/100}</span>
-          of £${this.funding.target/100} target.
-        </p>
+        <div class="event__funding__totals">
+          <div class="visually-hidden">£${this.funding.raised / 100} of £${this.funding.target / 100} target.</div>
+          <div class="event__funding__raised">£${this.funding.raised / 100} raised</div> 
+          <div class="event__funding__target">of £${this.funding.target / 100} target.</div>
+        </div>
         ${this.renderProgress()}
       </div>
     `
@@ -76,11 +89,11 @@ export class Details {
   render() {
     return `
       <div class="event__details">
-        <div class="event__details__date">
-          <strong>Date:</strong> ${this.date}
+        <div class="event__detail">
+          <strong>Date:</strong><span> ${this.date}</span>
         </div>
-        <div class="event__details__location">
-          <strong>Location:</strong> ${this.location}
+        <div class="event__detail">
+          <strong>Location:</strong><span> ${this.location}</span>
         </div>
       </div>
     `

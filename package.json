@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "TBG Frontender task",
   "scripts": {
+    "build": "webpack",
     "start": "npm run dev",
     "dev": "webpack-dev-server --watch"
   },
@@ -11,11 +12,17 @@
     "url": "https://github.com/thebeansgroup/frontender-task_vanilla"
   },
   "author": "sam",
-  "dependencies": {
-  },
   "devDependencies": {
+    "autoprefixer": "6.5.1",
     "babel-core": "^5.5.8",
     "babel-loader": "^5.1.4",
+    "css-loader": "^0.24.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "4.14.0",
+    "postcss-loader": "^1.1.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.6.2",
     "webpack": "^1.9.11",
     "webpack-dev-server": "^1.9.0"
   }

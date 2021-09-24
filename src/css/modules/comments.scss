@@ -1,0 +1,16 @@
+.comments {
+  flex-direction: column;
+  display: flex;
+}
+
+.comments__tree {
+  margin-bottom: 1.25rem;
+}
+
+.comments__subTree {
+  padding-left: 4.6875rem;
+}
+
+.comments li {
+  width: 100%;
+}
