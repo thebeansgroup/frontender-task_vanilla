@@ -1,3 +1,319 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8; }
+
+.visually-hidden {
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px; }
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 64.75rem;
+  height: 100vh;
+  padding-top: 3rem;
+  padding-right: .875rem;
+  padding-left: .875rem; }
+  @media (min-width: 52.5em) {
+    .container {
+      padding-right: 1.75rem;
+      padding-left: 1.75rem; } }
+
+.row {
+  margin-right: -.4375rem;
+  margin-left: -.4375rem; }
+  @media (min-width: 37.5em) {
+    .row {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      display: -ms-flexbox;
+      display: flex; } }
+  @media (min-width: 52.5em) {
+    .row {
+      margin-right: 1.75rem;
+      margin-left: 1.75rem; } }
+
+.row > * {
+  max-width: 100%;
+  margin-right: .4375rem;
+  margin-left: .4375rem; }
+  @media (min-width: 52.5em) {
+    .row > * {
+      margin-right: 1.75rem;
+      margin-left: 1.75rem; } }
+
+@media (min-width: 37.5em) {
+  .column {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -ms-flex: 1 0 0%;
+        flex: 1 0 0%;
+    width: 50%; } }
+
+.event {
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  padding-right: .6875rem;
+  padding-left: .6875rem;
+  padding-bottom: 1.3125rem;
+  border: 1px solid #e1e1e1;
+  border-radius: .3125rem;
+  background-color: #ffffff; }
+
+/*
+  Height set to 1px fixes ie11 not centring when only min-height specified.
+ */
+.event__title {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.75rem;
+  min-height: 1px;
+  margin-top: -1px;
+  margin-right: -.75rem;
+  margin-left: -.75rem;
+  padding-top: .625rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-bottom: .625rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1rem;
+  color: #323232;
+  border: 1px solid #e1e1e1;
+  border-radius: .3125rem;
+  background-color: #f5f5f5; }
+
+.event__description {
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-right: .1875rem;
+  padding-bottom: 2.3125rem;
+  padding-left: .1875rem;
+  line-height: 1.1875rem;
+  border-bottom: 1px solid #f0f0f0; }
+
+.event__description * + * {
+  margin-top: 1.125rem; }
+
+.event__progress {
+  margin-bottom: .6875rem; }
+
+.event__progress__meter {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 1.375rem;
+  border: 1px solid #e1e1e1;
+  background-color: #f5f5f5; }
+
+.event__progress__meter__level {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  background-color: #3cbf42; }
+
+.event__funding__totals {
+  padding-right: .5rem;
+  padding-left: .5rem; }
+
+.event__funding {
+  color: #245626; }
+
+.event__funding__raised {
+  margin-bottom: .3125rem;
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+  font-weight: 700; }
+
+.event__funding__target {
+  margin-bottom: 1.125rem;
+  font-size: 1.125rem; }
+
+/*
+Height set to 1px to ie11 not centring
+when only min-height specified.
+ */
+/*
+25em: 400px
+*/
+.event__details {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 1px;
+  min-height: 2.75rem;
+  padding-right: .75rem;
+  padding-left: .75rem;
+  font-size: .8125rem;
+  border: 1px solid #e1e1e1;
+  background-color: #f5f5f5; }
+  @media (min-width: 25em) {
+    .event__details {
+      padding-right: 1.625rem;
+      padding-left: 1.625rem; } }
+
+.event__details strong {
+  font-weight: 700;
+  color: #131b23;
+  text-transform: uppercase; }
+
+.event__details span {
+  white-space: pre; }
+
+.event__detail {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (min-width: 25em) {
+    .event__detail {
+      width: 50%; } }
+
+@media (max-width: 24.9375em) {
+  .event__detail:last-of-type {
+    padding-left: .25rem; } }
+
+.comments {
+  -ms-flex-direction: column;
+      flex-direction: column;
+  display: -ms-flexbox;
+  display: flex; }
+
+.comments__tree {
+  margin-bottom: 1.25rem; }
+
+.comments__subTree {
+  padding-left: 4.6875rem; }
+
+.comments li {
+  width: 100%; }
+
+.comment {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.6875rem;
+  width: 100%;
+  padding-top: 1rem;
+  padding-right: 1.25rem;
+  padding-bottom: 1rem;
+  padding-left: 1.25rem;
+  border: 1px solid #e1e1e1;
+  border-radius: .3125rem .3125rem .3125rem 0;
+  color: #323232; }
+  .comment:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: -1.75rem;
+    left: -.0625rem;
+    width: 2.25rem;
+    height: 1.875rem;
+    background-size: contain; }
+
+/*
+ Base64 encode comment tail graphic into css to load instantaneously. 
+ I find css triangle border solutions to be a bit hacky when it comes to borders
+ and lining up with a div for this effect needs pixel perfect accuracy across browser 
+ to look accurate to mockups
+ */
+.comment--even {
+  background: #f5f5f5; }
+  .comment--even:before {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAA8CAYAAADFXvyQAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAASKADAAQAAAABAAAAPAAAAAC/qyLaAAADgElEQVR4Ae2bbXISQRCGF0rAA/ADqIJLkX9yATV3UKPeIlFPYbxE8AgCB4hVfMunb28y0GwX2pss7MzsUjVZZjLZ3X7SPe+8m1Do9/vbAK9qtUqH/BUhUIz0826EQA4oAiTazQFFiUT6LyL9zHe3220wmUyC+Xz+p1gsXuaAWEqs1+tgNBoFq9Wqj+F2s9m8ywE9AlosFiEcdH8gc14Bzj19KwcECI8lRdudzwDzrlAobAgOvTINaLPZBMPhkErqN7KmAzjfH7Dsv2YWEJXUeDwOAOlnpVJp12q1X3ss+3eZBDSdTgNqKKVvrVbrNY7zPZLDd5kCRCVFWYPsCSUcJXV9iEP2MgMI60y43gDSTsIlDjmSCUCz2SxUKpTSgYRLHHLEa0C0K6aN33K53ALOJ5TUexx3Ei5xyBFvAVFJERzsjo9KuMQhR7wEBB8VlhQyqAsJvzgm4RKHHPEKEDOaKgmXOOSIN4CY0VRLuMQhR7wAZIwmMiiWhEsccsR5QGQ0ScafIuEShxxxFpAxmiitJ0u4xCFHnATEjCZJOD27uZWhJTPiHCBjNBH+syVcg9AZQMxo0nrzFVnzBsejLlwTvGaOE4CY0UxUwr0AZIwmgumhXSBz7jSBJTXH2gwyRpMWZJJwtN2D9KSC15zHSkDGaGLdoQfpH5E1HwAolgvXBK+ZYx0gZjRDCccj0ZNJuFOAuNHEjXfL5XK7Xq/3NEGcco4VGcSM5lklXAM2dUDMaJ5dwq0HZIwmbrSHdnYJtxaQMZqkVmlKuJWAjNHEopy6hFsHyBhNZM09WidtCbcGEDeauKluqVSyQsKtAMSMJq03X7ArfovjyV24JnjNnJPKPDOaVkp4aoC40cRN9NCslPBUABmjSbtjlFJqLlwTvGZOoiVmjCYu7ISEnw0QN5rIGmck/CyAuNHEBZ2S8JMDYkbTSQk/KSBmNOf0H+nY39xoLujanNiLNDeaCLaH5qyEa35ZsQAZo0mQfJDwRAExo0kSfoWSugKkVB6kawJLas5/M4gbTd8kXAPxn4C40cTJvJPwZwFiRpPWmxuU1CWOzrhwTfCaOSKDIkbTawmPDYgbTfxwjx5sNRqNruZEvs7ZZZAxmpRBKKVbtA7ghB8q8zV4TVw7QPQhD0Ah2aa/hWdCwmMBAhyvXLgmeM0ck0GZlHANoGAwGFxj3XmpmpzBSX8Bve809xpGzVcAAAAASUVORK5CYII=); }
+
+.comment--odd {
+  background: #ffffff; }
+  .comment--odd:before {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAA8CAYAAADFXvyQAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAASKADAAQAAAABAAAAPAAAAAC/qyLaAAADjElEQVR4Ae2ba3LaMBSFDVOgSwBmYFPkX9lA2+yhbdruImm7iiabCF1CDb95v9/kXLeCizW0l8RgScYzipBGsX2/3Kvj4ySper2+8XCUy2XqLkeIQDo0vgxDBC6AQkDCwwugMJHQ+FVonPjher32Op2ONxqNZul0+voCiKXEYrHwms2mh76O6UqpVHq8APoLaDwee61Wi0YPyJw3gNOmQeIBbTYbr9vtesPhkB53vgLMh1QqtSY4dCQa0HK5DEpqPp93kDVVwPn5B8vua2IBTSaToKSwKf/K5XKVfD7/e4dl9ylxgKik+v2+1+v1PJTSDziIt+inOyT7nxIFaLVaBVkznU4DCUdJ3e7j0EeJATSbzYL9BpC2Eq7j0GcSAYhKipQKpbQn4ToOfcZpQPRUTM82KKkN4HxBSX1Ev5VwHYc+4ywgSHdQUpDygxKu49BnnASEh77AT0GxapDwq0MSruPQZ5wCxIymSMJ1HPqMM4CY0RRLuI5Dn3ECkDKaKKmjJFzHoc9YDUgZzcFg8CwJ13HoM9YCUkYTpfVsCddx6DNWAmJGkySc3t3c66FFM2MVIG40Ef6LJVyC0BpAzGjSfvMdWfMO/UEXLglessYKQMxoRirhTgBSRhPB+GhXyJxHSWBRrTE2g5TRpA0ZpfSAtn2RHlXwkvMYCUgZTew79CL9M7LmEwAd5cIlwUvWGAeIGc1AwvFK9GQSbhUgbjRx47VsNlspFAq+JIhTrjEig5jRPKuES8DGDogZzbNLuNGAuNHEjfpoZ5dwYwEpo0lqFaeEGwlIGU1kUOwSbhQgbjSRNW20atwSbgwgbjRxU7VMJmOEhBsBiBlN2m++4an4PfqTu3BJ8JI1J5V5ZjSNlPDYAHGjiZvw0YyU8FgAKaNJUo5Sis2FS4KXrIm0xJTRxIWtkPCzAeJGE1ljjYSfBRA3mrigVRJ+ckDMaFop4ScDFDKaU/qLdDzf3EkuaNuaozdpbjQRrI9mrYRLflhHAVJGkzZlFyQ8MkAho0kSfoOSugGkWF6kSwKLas1/M4gbTdckXALxn4C40cTJnJPwFwFiRpP2mzuU1DV6a1y4JHjJGi2DQkbTaQk/GhA3mvhmn15sFYvFmuRErq7ZZpAymqRYKKV7tCrgBP9U5mrwkri2gNrtNoEh2abfhSdCwo8CBDhOuXBJ8JI1KoMSKeESQF6j0bjFvvNatDiBi54ASHxG6z/m/6wAAAAASUVORK5CYII=); }
+
+.comment__name {
+  font-weight: 700; }
+
+.comment__donation {
+  white-space: pre; }
+
+.comment__thumbnail {
+  width: 4.6875rem;
+  height: 4.6875rem;
+  -ms-flex: none;
+      flex: none; }
+
+.comment__details {
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: .25rem;
+  font-size: .875rem;
+  line-height: .875rem; }
+
+.comment__content {
+  padding-left: 1rem; }
+
+.comment__message {
+  font-size: 1.125rem;
+  line-height: 1.375rem; }
