@@ -25,6 +25,6 @@ export default class {
         <div class="comments">
             ${this.comments.map(comment => comment.render()).join("")}
         </div>
-    `
+    `;
     }
 }

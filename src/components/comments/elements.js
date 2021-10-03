@@ -12,7 +12,7 @@ export class ProfilePicture {
     render() {
         return `
         <img class="comments__profile_picture" src="${this.imgSrc}" alt='Profile Picture'>
-        `
+        `;
     }
 }
 
@@ -30,13 +30,13 @@ export class Title {
 
         return this.donation === 0 ?
             this.name :
-            `${this.name} <span>donated £${this.donation}</span>`
+            `${this.name} <span>donated £${this.donation}</span>`;
     }
 
     render() {
         return `
             <p class="comments__title">${this.renderTitle()}</p>
-        `
+        `;
     }
 }
 
@@ -52,7 +52,7 @@ export class Message {
     render() {
         return `
         <p class="comments__message">${this.message}</p>
-        `
+        `;
     }
 }
 
@@ -76,14 +76,14 @@ export class Comment {
                 child.donation,
                 child.comment,
                 child.children
-            )
+            );
 
             return `
                 <div class="comments__comment comments__child">
                     ${childComment.render()}
                 </div>
-            `
-        }) : ''
+            `;
+        }) : '';
     }
 
     render() {
@@ -99,6 +99,6 @@ export class Comment {
            <div class="comments__comment__triangle"></div>
         </div>
         ${this.renderChildren()}
-        `
+        `;
     }
 }
