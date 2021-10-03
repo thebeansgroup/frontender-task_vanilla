@@ -3,8 +3,8 @@
  */
 
 export class ProfilePicture {
-    constructor(imgSrc) {
-        this.imgSrc = imgSrc;
+    constructor(userId) {
+        this.imgSrc = `images/faces/128-${userId}.jpg`;
     }
 
     render() {
@@ -59,19 +59,20 @@ export class Message {
  */
 
 export class Comment {
-    constructor(ProfilePicture, Title, Message, children) {
-        this.profilePicture = ProfilePicture;
-        this.title = Title;
-        this.message = Message;
+    constructor(userId, name, donationAmount, message, children) {
+        this.profilePicture = new ProfilePicture(userId);
+        this.title = new Title(name, donationAmount);
+        this.message = new Message(message);
         this.children = children;
     }
 
     renderChildren() {
         return this.children ? this.children.map((child) => {
             const childComment = new Comment(
-                new ProfilePicture('images/faces/128-1.jpg'),
-                new Title(child.name, child.donation),
-                new Message(child.comment),
+                1,
+                child.name,
+                child.donation,
+                child.comment,
                 child.children
             )
 

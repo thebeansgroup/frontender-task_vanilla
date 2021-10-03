@@ -1,4 +1,4 @@
-import {ProfilePicture, Title, Message, Comment} from "./elements";
+import {Comment} from "./elements";
 
 export default class {
     constructor(data) {
@@ -10,10 +10,11 @@ export default class {
     createFactories() {
         this.comments = this.data.comments.map(comment =>
             new Comment(
-                new ProfilePicture('images/faces/128-1.jpg'),
-                new Title(comment.name, comment.donation),
-                new Message(comment.comment),
-                comment.children,
+                1,
+                comment.name,
+                comment.donation,
+                comment.comment,
+                comment.children
             )
         );
     }
