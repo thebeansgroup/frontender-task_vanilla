@@ -1,3 +1,5 @@
+import {uniqueRandomProfilePicture} from "./helper";
+
 /**
  * ProfilePicture Component
  */
@@ -69,7 +71,7 @@ export class Comment {
     renderChildren() {
         return this.children ? this.children.map((child) => {
             const childComment = new Comment(
-                1,
+                uniqueRandomProfilePicture(),
                 child.name,
                 child.donation,
                 child.comment,

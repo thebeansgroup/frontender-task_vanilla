@@ -1,4 +1,5 @@
 import {Comment} from "./elements";
+import {uniqueRandomProfilePicture} from "./helper";
 
 export default class {
     constructor(data) {
@@ -10,7 +11,7 @@ export default class {
     createFactories() {
         this.comments = this.data.comments.map(comment =>
             new Comment(
-                1,
+                uniqueRandomProfilePicture(),
                 comment.name,
                 comment.donation,
                 comment.comment,
