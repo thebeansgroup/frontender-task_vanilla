@@ -11,11 +11,13 @@ export default class {
     createFactories() {
         this.comments = this.data.comments.map(comment =>
             new Comment(
-                uniqueRandomProfilePicture(),
-                comment.name,
-                comment.donation,
-                comment.comment,
-                comment.children
+                {
+                    userId: uniqueRandomProfilePicture(),
+                    name: comment.name,
+                    donationAmount: comment.donation,
+                    message: comment.comment,
+                    children: comment.children
+                }
             )
         );
     }

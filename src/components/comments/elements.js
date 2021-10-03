@@ -61,7 +61,7 @@ export class Message {
  */
 
 export class Comment {
-    constructor(userId, name, donationAmount, message, children) {
+    constructor({userId, name, donationAmount, message, children}) {
         this.profilePicture = new ProfilePicture(userId);
         this.title = new Title(name, donationAmount);
         this.message = new Message(message);
@@ -70,12 +70,13 @@ export class Comment {
 
     renderChildren() {
         return this.children ? this.children.map((child) => {
-            const childComment = new Comment(
-                uniqueRandomProfilePicture(),
-                child.name,
-                child.donation,
-                child.comment,
-                child.children
+            const childComment = new Comment({
+                    userId: uniqueRandomProfilePicture(),
+                    name: child.name,
+                    donationAmount: child.donation,
+                    message: child.comment,
+                    children: child.children
+                }
             );
 
             return `
