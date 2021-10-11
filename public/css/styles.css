@@ -1,16 +1,55 @@
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+html {
+  height: 100%;
 }
 
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+
+p {
+  margin: 10px 20px;
+  font-size: 20px;
+}
+
+hr {
+  width: 95%;
+  border: 1px solid #e1e1e1;
+  margin-top: 40px;
+}
+
+div.container {
+  margin: 7.5% 10%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* event  */
+
 .event {
+  order: 1;
   border: 1px solid #e1e1e1;
   border-radius: 5px;
   padding-bottom: 10px;
+  margin-right: 2%;
   background: white;
+  height: fit-content;
+}
+
+.event__description > p {
+  margin: 20px 20px;
+  font-size: 1.5em;
+}
+
+.event__funding {
+  margin: 20px;
 }
 
 .event__title {
-  font-size: 1rem;
+  font-size: 1.4em;
   background: #f4f4f4;
   border: 1px solid #e1e1e1;
   border-radius: 5px;
@@ -20,7 +59,6 @@ body {
 
 .event__funding__totals {
   color: rgb(0, 99, 0);
-  margin: 20px 0;
 }
 
 .event__funding__raised {
@@ -50,5 +88,60 @@ body {
 /* comments */
 
 .comments {
-  font-size: 2em;
+  margin-left: 2%;
+  order: 2;
+}
+
+.comment__container {
+  display: flex;
+  position: relative;
+  padding: 12px 14px;
+  background: #f4f4f4;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px 5px 5px 0px;
+  margin-bottom: 40px;
+}
+
+.comment__container:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  width: 0;
+  border-top: 18px solid #f4f4f4;
+  border-right: 18px solid transparent;
+}
+
+.comment__container:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  width: 0;
+  border-top: 19px solid #e1e1e1;
+  border-right: 19px solid transparent;
+}
+
+@media only screen and (max-width: 900px) {
+  .row {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .comments {
+    margin-top: 40px;
+  }
+
+  .comment__image {
+    height: 15vh;
+    width: auto;
+  }
+
+  .comment__name {
+    font-size: 0.75em;
+  }
+
+  .comment__comment {
+    font-size: 1em;
+  }
 }

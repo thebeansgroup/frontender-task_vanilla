@@ -1,6 +1,6 @@
-import data     from './data.js';
-import Event    from './components/event';
-import Comments from './components/comments';
+import data from "./data.js";
+import Event from "./components/event";
+import Comments from "./components/comments";
 
 /**
  * Fundraising App
@@ -15,17 +15,17 @@ class App {
   }
 
   createFactories() {
-    this.event    = new Event(data);
+    this.event = new Event(data);
     this.comments = new Comments(data);
   }
 
   render() {
     this.el.innerHTML = `
       <div class="row">
-        <div class="column">${this.event.render()}</div>
-        <div class="column">${this.comments.render()}</div>
+      ${this.comments.render()}
+      ${this.event.render()}
       </div>
     `;
   }
 }
-const app = new App(document.querySelector('.container'), data);
+const app = new App(document.querySelector(".container"), data);
