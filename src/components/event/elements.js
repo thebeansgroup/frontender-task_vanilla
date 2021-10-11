@@ -26,6 +26,7 @@ export class Description {
   render() {
     return `
       <div class="event__description">${this.description}</div>
+      <hr />
     `;
   }
 }
