@@ -18,15 +18,22 @@ export default class {
   }
 
   createFactories() {
-    // this.comments = this.data.comments.map((comment) => new Comment(comment));
-
-    this.comment = new Comment(this.data.comments);
+    this.comments = this.data.comments.map(
+      (comment) =>
+        new Comment({
+          name: comment.name,
+          donation: comment.donation,
+          comment: comment.comment,
+          imageId: comment.imageId,
+          children: comment.children,
+        })
+    );
   }
 
   render() {
     return `
-        <div id="comments" class="comments">
-        ${this.comment.render()}
+        <div class="comments">
+            ${this.comments.map((comment) => comment.render()).join("")}
         </div>
       `;
   }
