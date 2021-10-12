@@ -25,12 +25,9 @@ export class Comment {
     }
 
     comment += `
-      <p>
-        ${this.comment.comment}
-      </p>
-    `;
-
-    comment += `
+            <p>
+              ${this.comment.comment}
+            </p>
           </div>
         </div>
         <div class="comments__comment___tail"></div>
@@ -39,7 +36,7 @@ export class Comment {
 
     this.comment.children.forEach(element => {
       let child = `
-        <div class="comments__child-comment">
+        <div class="comments__comment comments__child-comment">
           <div class="comments__comment__content">
             <div class="comments__comment__content__image">
               <img src="${element.image}"/>
@@ -52,21 +49,18 @@ export class Comment {
       if (element.donation > 0) {
         child += `donated £${element.donation / 100}`;
       }
-
-      child += `
-      <p>
-        ${element.comment}
-      </p>
-    `;
       
       child += `
+              <p>
+                ${element.comment}
+              </p>
+            </div>
           </div>
+          <div class="comments__comment___tail comments__child-comment___tail"></div>
         </div>
-        <div class="comments__child-comment___tail"></div>
-      </div>
       `;
 
-      comment += child
+      comment += child;
     });
     
     return comment;

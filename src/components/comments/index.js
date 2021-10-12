@@ -3,11 +3,7 @@ import { Comment } from './elements.js';
 export default class {
   constructor(data) {
     this.data = data;
-    this.createFactories();
     this.render();
-  }
-
-  createFactories() {
   }
 
   render() {
@@ -16,7 +12,7 @@ export default class {
       const comment = new Comment(element)
       comments += comment.render()
     });
-    comments += `</div>`
+    comments += `</div>`;
     
     return comments;
   }
