@@ -44,7 +44,6 @@ export class Funding {
 
     return `
       <div class="event__progress">
-        <p class="event__progress__total">${percentage}% of total raised</p>
         <b class="event__progress_meter" style="width: ${percentage}%"></b>
       </div>
     `;
@@ -53,10 +52,12 @@ export class Funding {
   render() {
     return `
       <div class="event__funding">
-        <p class="event__funding__totals">
-          <span class="event__funding__raised">£${this.funding.raised/100}</span>
+        <div class="event__funding__raised">
+          £${(this.funding.raised/100).toFixed(2)} raised
+        </div>
+        <div class="event__funding__total">
           of £${this.funding.target/100} target.
-        </p>
+        </div>
         ${this.renderProgress()}
       </div>
     `
@@ -77,10 +78,10 @@ export class Details {
     return `
       <div class="event__details">
         <div class="event__details__date">
-          <strong>Date:</strong> ${this.date}
+          <strong>DATE:</strong> ${this.date}
         </div>
         <div class="event__details__location">
-          <strong>Location:</strong> ${this.location}
+          <strong>LOCATION:</strong> ${this.location}
         </div>
       </div>
     `
