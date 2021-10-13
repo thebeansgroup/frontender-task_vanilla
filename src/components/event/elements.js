@@ -2,7 +2,7 @@
  * Title Component
  */
 
-export class Title {
+ export class Title {
   constructor(title) {
     this.title = title;
   }
@@ -41,22 +41,21 @@ export class Funding {
 
   renderProgress() {
     const percentage = this.funding.raised / this.funding.target * 100;
-
     return `
-      <div class="event__progress">
-        <p class="event__progress__total">${percentage}% of total raised</p>
-        <b class="event__progress_meter" style="width: ${percentage}%"></b>
-      </div>
-    `;
+    <div class="event__progress">
+	    <div class="event__bar" style="width:${percentage}%">
+	    </div>
+    </div>
+    `
   }
 
   render() {
     return `
       <div class="event__funding">
-        <p class="event__funding__totals">
-          <span class="event__funding__raised">£${this.funding.raised/100}</span>
-          of £${this.funding.target/100} target.
-        </p>
+        <div>
+          <p class="event__funding__raised">£${this.funding.raised/100} raised</p>
+          <p class="event__funding__target">of £${this.funding.target/100} target.</p>
+        </div>
         ${this.renderProgress()}
       </div>
     `
