@@ -1,3 +1,146 @@
+:root {
+  --border-color: #e7e7e7;
+  --green: #245627;
+  --light-green: #3dbe43;
+  --white-smoke: #f5f5f5;
+}
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #323232;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.row {
+  padding: 2rem 0 0;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.event {
+  border: 1px solid var(--border-color);
+}
+
+.event__title {
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 1.15rem;
+  color: #464646;
+  background-color: var(--white-smoke);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.event__description {
+  padding: 0.5rem;
+}
+
+.event__funding {
+  padding: 0.5rem;
+  border-top: 1px solid var(--white-smoke);
+  border-bottom: 1px solid var(--white-smoke);
+}
+
+.event__funding__totals {
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.5rem;
+  color: var(--green);
+}
+
+.event__funding__raised {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.event__progress_meter {
+  border: 1px solid var(--border-color);
+  background-color: var(--white-smoke);
+}
+
+.event__progress_meter_process {
+  height: 1.2rem;
+  background-color: var(--light-green);
+}
+
+.event__details {
+  margin: 0.5rem 0.5rem 1rem;
+  padding: 1rem 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  border: 1px solid var(--border-color);
+  background-color: var(--white-smoke);
+}
+
+.comment {
+  position: relative;
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  margin-bottom: 2.5rem;
+  background-color: var(--white-smoke);
+  display: flex;
+  gap: 1rem;
+  border-radius: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.comment.child {
+  margin: -1.25rem 0 2.5rem 4rem;
+  background-color: white;
+}
+.comment.child .comment__triangle {
+  --white-smoke: white;
+}
+
+.comment__triangle {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 28px 38px 0 0;
+  border-color: var(--border-color) transparent transparent transparent;
+}
+
+.comment__triangle::after {
+  content: "";
+  position: absolute;
+  top: -28px;
+  left: 1px;
+  display: block;
+  width: 0;
+  height: 0;
+  z-index: 1;
+  border-style: solid;
+  border-width: 26px 35px 0 0;
+  border-color: var(--white-smoke) transparent transparent transparent;
+}
+
+.comment__avatar {
+  width: 4.5rem;
+  height: 4.5rem;
+  display: block;
+}
+
+.comment__author {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
