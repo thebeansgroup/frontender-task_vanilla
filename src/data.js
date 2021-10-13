@@ -14,10 +14,12 @@ const data = {
       name: "Person A",
       donation: 5000,
       comment: "Good luck with your thing!",
+      imgPath: "./images/faces/128-1.jpg",
       children: [
         {
           name: "Person D",
           donation: 0,
+          imgPath: "./images/faces/128-2.jpg",
           comment: "Thank you",
           children: []
         }
@@ -26,12 +28,14 @@ const data = {
     {
       name: "Person B",
       donation: 1000,
+      imgPath: "./images/faces/128-3.jpg",
       comment: "Good luck. Well done! A great achievement for a great cause.",
       children: []
     },
     {
       name: "Person C",
       donation: 4000,
+      imgPath: "./images/faces/128-5.jpg",
       comment: "Hope all goes well and you successfully achieve your goal. A cause close to our hearts.",
       children: []
     }
