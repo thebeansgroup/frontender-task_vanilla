@@ -1,3 +1,195 @@
+:root{
+  --main-color:color: #282828;
+  --color-white: #ffffff;
+  --grey-border-color: #d3d3d3;
+  --grey-background-color: #f1f1f1;
+  --light-grey-background-color: #f5f5f5;
+  --light-green-color: #3cbf42;
+  --dark-green-color: #336235;
+  
+
+
+}
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--main-color);
+  background-color: var(--light-grey-background-color);
 }
+
+.row{
+  max-width: 80%;
+  margin: auto;
+}
+
+.column{
+  width: 46%;
+  float: left;
+  margin: 2%;
+}
+
+.event{
+  border: 1px solid var(--grey-border-color);
+  border-radius: 6px;
+  
+}
+
+.event > * {
+  padding: 14px;
+}
+
+.event * {
+  margin: 0;
+}
+p{
+  margin-top: 0;
+}
+
+.event__title{
+  font-size: 20px;
+  border-bottom: 1px solid var(--grey-border-color);
+  background-color: var(--grey-background-color);
+}
+
+.event__description{
+  border-bottom: 1px solid var(--grey-border-color);
+  padding-bottom: 24px;
+}
+
+.event__details{
+  background-color: var(--grey-background-color);
+  border: 1px solid var(--grey-border-color);
+  margin: 14px;
+}
+
+.event__details__date{
+  width: 50%;
+  float: left;
+}
+
+
+.comments-container,
+.comments-container-children{
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  background-color: var(--grey-background-color);
+  border: 1px solid var(--grey-border-color);
+  border-radius: 6px;
+  margin-bottom: 60px;
+  position: relative;
+  border-bottom-left-radius: 0;
+
+}
+
+.comments-container:before,
+.comments-container-children:before{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -1px;
+  right: auto;
+  top: auto;
+  bottom: -40px;
+  border: 20px solid;
+  border-color: var(--grey-border-color) transparent transparent var(--grey-border-color);
+}
+
+
+.comments-container:after,
+.comments-container-children::after{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  right: auto;
+  top: auto;
+  bottom: -37px;
+  border: 19px solid;
+  border-color: var(--grey-background-color) transparent transparent var(--grey-background-color);
+}
+
+.comments-container-children::after{
+  border-color: var(--color-white) transparent transparent var(--color-white);
+}
+
+.comments-container-children{
+  background-color: #ffffff;
+  width: 80%;
+  float: right;
+}
+
+
+.comment-content,
+.comment-content-children{
+  padding: 20px;
+}
+
+.person-image{
+  display: inline-block;
+  width: 20%;
+  vertical-align: middle;
+  height: auto;
+}
+
+.person-details{
+  font-weight: 600;
+}
+
+.person-details span{
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.comment-detail{
+  display: inline-block;
+  width: 75%;
+  vertical-align: top;
+  margin-left: 8px;
+}
+
+.event__funding__raised{
+  color: var(--dark-green-color);
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.total__target{
+  color: var(--dark-green-color);
+  margin-bottom: 12px;
+}
+
+.event__progress{
+  border: 1px solid var( --grey-border-color);
+  background-color: var(--grey-background-color);
+}
+
+.event__progress_meter{
+  height: 24px;
+  background-color: var(--light-green-color);
+}
+
+
+@media only screen and (max-width: 768px) {
+  .column{
+    width: 90%;
+    margin: auto;
+    float: none;
+  }
+
+  .row{
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .comments-container,
+  .comments-container-children{
+    margin: 60px 0 0px 0px;
+
+  }
+
+}
+
