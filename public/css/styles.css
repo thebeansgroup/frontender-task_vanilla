@@ -1,3 +1,152 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px;
+}
+
+.column {
+  margin: 20px;
+  width: 500px;
+}
+
+.event {
+  height: 350px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e5e5e5;
+  border-radius: 5px;
+  background: white;
+}
+
+.event__title {
+  border-radius: 5px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #f5f5f5;
+}
+
+.event__description {
+  padding: 10px;
+  box-shadow: 0 24px 0 -23px lightgrey;
+  background: #ffffff;
+}
+
+.event__description > div {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.event__funding {
+  color: darkgreen;
+  background: #ffffff;
+  padding: 10px;
+}
+
+.event__funding__raised {
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 2px;
+}
+
+.event__progress__total {
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  margin: 20px 0px 0px 0px;
+}
+
+.event__progress__total > .event__progress_meter {
+  background-color: limegreen;
+  height: 20px;
+}
+
+.event__details {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 10px;
+  background: #f5f5f5;
+}
+
+.event__details__date {
+  padding: 16px 100px 13px 21px;
+}
+
+.event__details__date > strong {
+  padding-right: 5px;
+}
+
+.event__details__location {
+  padding: 16px 0px 13px 30px;
+}
+
+.event__details__location > strong {
+  padding-right: 5px;
+}
+
+.comment {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e5e5e5;
+  border-radius: 5px;
+  margin: 15px 0px;
+  display: flex;
+}
+
+.comment__child {
+  margin-left: 40px;
+}
+
+.comment__proPic {
+  padding: 20px;
+}
+
+.comment__left {
+  width: 170px;
+}
+
+.comment__right {
+  padding: 20px;
+}
+
+.comment__name {
+  font-weight: bold;
+}
+
+.comment__commentDetail {
+  padding-top: 5px;
+  font-size: 20px;
+}
+
+.arrow__down {
+  width: 0px;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 44px solid #e5e5e5;
+  margin: -47px 0px 0px 0px;
+}
+
+.arrow__down:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 29px solid transparent;
+  border-bottom: 29px solid transparent;
+  border-left: 44px solid #f8f8f8;
+  margin: -30px 0px 0px -43px;
+  position: absolute;
+}
+
+.arrow__down__child:after {
+  border-top: 29px solid transparent;
+  border-bottom: 29px solid transparent;
+  border-left: 44px solid white;
+}
+
+.comment__child_inner {
+  background: white;
 }

@@ -1,14 +1,24 @@
+import {Comment} from './comment';
+
+
+
 export default class {
   constructor(data) {
-    this.data = data;
+    this.data = data.comments;
     this.createFactories();
     this.render();
   }
 
-  createFactories() {
-  }
+  createFactories() {}
 
   render() {
-    return "comments";
+    return `
+      ${this.data.map(value => {
+          return `
+            ${new Comment(value).render()}
+          `
+        }).join('')
+      }
+    `;
   }
 }
