@@ -9,7 +9,7 @@ export class Title {
 
   render() {
     return `
-      <h1 class="event__title">${this.title}</h1>
+      <h1 class="event__title card__title">${this.title}</h1>
     `
   }
 }
@@ -54,7 +54,7 @@ export class Funding {
     return `
       <div class="event__funding">
         <p class="event__funding__totals">
-          <span class="event__funding__raised">£${this.funding.raised/100}</span>
+          <span class="event__funding__raised">£${(this.funding.raised/100).toFixed(2)} raised</span>
           of £${this.funding.target/100} target.
         </p>
         ${this.renderProgress()}
@@ -77,10 +77,10 @@ export class Details {
     return `
       <div class="event__details">
         <div class="event__details__date">
-          <strong>Date:</strong> ${this.date}
+          <strong>DATE:</strong> ${this.date}
         </div>
         <div class="event__details__location">
-          <strong>Location:</strong> ${this.location}
+          <strong>LOCATION:</strong> ${this.location}
         </div>
       </div>
     `

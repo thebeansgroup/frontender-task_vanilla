@@ -1,3 +1,251 @@
+/**
+ * Default
+ */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #3a3a3a;
+}
+
+
+/**
+ * Layout
+ */
+.container{
+  max-width: 65rem; 
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.row{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+}
+
+.column{
+  width: 100%;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+
+/**
+ * Card Module
+ */
+.card{
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.card > *:last-child{
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.card.white{
+  background-color: #ffffff;
+}
+
+.card__title{
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e1e1e1;
+  margin: -1rem -1rem 0;
+  padding: 1rem 1rem 0.7rem;
+  font-size: 1rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+
+/**
+ * Event
+ */
+.event{
+  margin-bottom: 3rem;
+}
+
+.event .event__description{
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.event .event__funding__totals{
+  color: #245626;
+  font-size: 1.2rem;
+}
+
+.event .event__funding__totals span{
+  display: block;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.event .event__progress{
+  background-color: #f5f5f5;
+  border: 1px solid #e1e1e1;
+  position: relative;
+  height: 24px;
+  margin-bottom: 1rem;
+}
+
+.event .event__progress:hover .event__progress__total{
+  opacity: 1;
+}
+
+.event .event__progress_meter{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3cbf42;
+}
+
+.event .event__progress__total{
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  background-color: whitesmoke;
+  border: 1px solid #e1e1e1;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin: 0;
+  margin-bottom: -0.4rem;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -o-transform: translate(-50%);
+  transition: opacity 0.5s;
+  z-index: 99;
+}
+
+.event .event__details{
+  background-color: #f5f5f5;
+  border: 1px solid #e1e1e1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  font-size: 0.9rem;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+
+.event .event__details > *{
+  margin-left: 1rem;
+  width: 100%;
+}
+
+/**
+ * Comments
+ */
+.comment{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3rem;
+  position: relative;
+  border-bottom-left-radius: 0;
+}
+
+.comment::before, .comment::after{
+  content: '';
+  position: absolute;
+}
+
+.comment::before{
+  bottom: -32px;
+  left: -1px;
+  border-top: 16px solid #e0e0e0;
+  border-left: 21px solid #e0e0e0;
+  border-bottom: 16px solid transparent;
+  border-right: 21px solid transparent;
+  z-index: 1;
+}
+
+.comment::after{
+  bottom: -30px;
+  left: 0;
+  border-top: 15px solid #f5f5f5;
+  border-left: 20px solid #f5f5f5;
+  border-bottom: 15px solid transparent;
+  border-right: 20px solid transparent;
+  z-index: 2;
+}
+
+
+.comment.comment__child{
+  margin-left: 5rem;
+  margin-top: -2rem;
+}
+
+.comment.comment__child::after{
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+}
+
+.comment .comment__image{
+  margin-right: 1rem;
+  max-width: 80px; 
+}
+
+.comment .comment__name{
+  font-weight: bold;
+}
+
+.comment .comment__name small{
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+
+.comment .comment__comment{
+  margin-bottom: 0;
+}
+
+/**
+ * Media Queries
+ */
+@media(min-width: 1100px){
+  .container{ 
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 5rem;
+  }
+
+  .row{
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+
+  .column{
+    width: calc(50% - 3rem);
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  /* Event */
+  .event{
+    margin-bottom: 0;
+  }
 }
