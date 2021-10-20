@@ -22,7 +22,7 @@ export default class {
 
   render() {
     return `
-      <div class="event">
+      <div class="event card white">
         ${this.title.render()}
         ${this.description.render()}
         ${this.funding.render()}
