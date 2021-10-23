@@ -18,7 +18,7 @@ const data = {
         {
           name: "Person D",
           donation: 0,
-          comment: "Thank you",
+          comment: "Thank you.",
           children: []
         }
       ]
@@ -38,4 +38,7 @@ const data = {
   ]
 };
 
+
 export default data;
+
+

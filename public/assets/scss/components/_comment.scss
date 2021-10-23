@@ -1,0 +1,60 @@
+.comment {
+  &__triangle {
+    &:nth-child(3) {
+      margin-left: 46px;
+      border-top: 31px solid #ffffff;
+    }
+    width: 0;
+    height: 0;
+    border-right: 34px solid transparent;
+    border-top: 30px solid $whitesmoke;
+    margin: -35px 0 16px 1px;
+
+    &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-right: 41px solid transparent;
+      border-top: 40px solid #e7e7e7;
+      position: absolute;
+      margin: -36px 0 0 -1px;
+      z-index: -1;
+    }
+  }
+
+  &__body {
+    @include card();
+    background: $whitesmoke;
+    margin-bottom: 30px;
+    padding: 15px;
+    display: flex;
+    &--2 {
+      @include card();
+      background: $white;
+      display: flex;
+      margin: 0 0 30px 45px;
+      padding: 15px;
+    }
+  }
+
+  &__img {
+    display: inline;
+    margin-right: 15px;
+    height: 80px;
+  }
+
+  &__name {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px;
+
+    span {
+      font-weight: initial;
+    }
+  }
+
+  &__message {
+    margin-top: 0;
+  }
+}
