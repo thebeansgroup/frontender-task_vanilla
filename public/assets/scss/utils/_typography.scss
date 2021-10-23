@@ -1,0 +1,26 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $whitesmokeBg;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+p {
+  color: $dimgray;
+  font-size: 18px;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 600;
+}
