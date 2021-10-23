@@ -5,9 +5,6 @@
 //  -- -- details
 
 import {Title, Description, Funding, Details} from './elements.js';
-
-
-// console.log(data);
 export default class {
   constructor(data) {
     this.data = data;
