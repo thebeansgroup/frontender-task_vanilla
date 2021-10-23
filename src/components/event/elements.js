@@ -54,8 +54,8 @@ export class Funding {
     return `
       <div class="event__funding">
         <p class="event__funding__totals">
-          <span class="event__funding__raised">£${this.funding.raised/100}</span>
-          of £${this.funding.target/100} target.
+          <span class="event__funding__raised">£${this.funding.raised/100} raised</span>
+          <span class="event__funding__target">of £${this.funding.target/100} target.</span>
         </p>
         ${this.renderProgress()}
       </div>
@@ -76,7 +76,7 @@ export class Details {
   render() {
     return `
       <div class="event__details">
-        <div class="event__details__date">
+        <div class="event__details__date w50">
           <strong>Date:</strong> ${this.date}
         </div>
         <div class="event__details__location">
