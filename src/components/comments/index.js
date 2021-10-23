@@ -1,10 +1,11 @@
 //  -- comments
 //  -- -- name
 //  -- -- donation
-//  -- -- funding
-//  -- -- details
+//  -- -- comment
+//  -- -- children
 
-import { Name } from "./elements.js";
+
+import { Comments} from "./elements.js";
 
 export default class {
   constructor(data) {
@@ -14,23 +15,14 @@ export default class {
   }
 
   createFactories() {
-    this.name = new Name(this.data.comments.name);
-    // this.donation = new Donation(this.data.comments.donation);
-    // this.comment = new Comment(this.data.comments.comment);
-    // this.Children = new Children(this.data.comments.children)
-    
+    this.comments = new Comments(this.data.comments);
   }
 
   render() {
     return `
-    <div class="comment">
-    ${this.name.render()}
-    </div>
+      <div class="comments">
+      ${this.comments.render()}
+      </div>
   `;
   }
 }
-
-   // ${this.name.render()}
-      // ${this.donation.render()}
-      // ${this.funding.render()}
-      // ${this.details.render()}
